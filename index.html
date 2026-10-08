@@ -1,88 +1,830 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="it">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Saveat 0.2</title>
-<style>
-:root{--orange:#F26A2E;--charcoal:#333638;--soft:#F7F5F2;--green:#5D8B63;--white:#fff;--muted:#777}
-*{box-sizing:border-box} body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--soft);color:var(--charcoal)}
-.app{max-width:430px;margin:auto;min-height:100vh;background:#fff;box-shadow:0 0 24px #0001}
-header{padding:20px 20px 10px;display:flex;justify-content:space-between;align-items:center}
-.brand{display:flex;align-items:center;gap:9px}.mark{position:relative;width:34px;height:26px}
-.c{position:absolute;width:22px;height:22px;border:4px solid var(--orange);border-radius:50%;top:2px}.c.a{left:0}.c.b{right:0;border-color:var(--charcoal)}
-.logo{font-weight:800;font-size:25px;letter-spacing:-1px}.logo b{color:var(--orange)} .tag{font-size:10px;color:var(--muted)}
-main{padding:12px 20px 90px}.screen{display:none}.screen.active{display:block}
-h1{font-size:30px;line-height:1.05;margin:18px 0 8px}h2{margin:12px 0}.lead{color:var(--muted);line-height:1.4}
-.actions{display:grid;gap:10px;margin:22px 0}.btn{border:0;border-radius:14px;padding:15px 16px;font-weight:750;font-size:15px;cursor:pointer}
-.primary{background:var(--orange);color:#fff}.secondary{background:var(--charcoal);color:#fff}.ghost{background:#f0efed;color:var(--charcoal)}
-.section-title{font-size:17px;margin:26px 0 12px}.card{border:1px solid #ece9e5;border-radius:18px;overflow:hidden;margin:12px 0;background:#fff}
-.photo{height:135px;background:linear-gradient(135deg,#f2c19d,#f6e7da);display:flex;align-items:center;justify-content:center;font-size:50px}
-.cardbody{padding:14px}.row{display:flex;justify-content:space-between;gap:10px;align-items:center}.pill{font-size:11px;padding:5px 8px;border-radius:99px;background:#fff1e9;color:#a93d10;font-weight:800}
-.meta{font-size:13px;color:var(--muted);margin-top:5px}.ethic{margin:28px 0;padding:14px;border-left:4px solid var(--green);background:#f3f7f3;font-size:13px;line-height:1.4}
-label{display:block;font-size:13px;font-weight:700;margin:13px 0 5px}input,select,textarea{width:100%;padding:13px;border:1px solid #ddd7d1;border-radius:12px;font:inherit}
-nav{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:min(430px,100%);display:flex;background:#fff;border-top:1px solid #eee;padding:9px 8px calc(9px + env(safe-area-inset-bottom))}
-nav button{flex:1;border:0;background:none;font-size:12px;color:#666;padding:7px}.saved{font-size:56px;text-align:center;margin:50px 0 12px}
-.small{font-size:12px;color:var(--muted)} .back{border:0;background:none;padding:4px 0;color:var(--muted);font-weight:700}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Save Eat - Salva il cibo, non sprecarlo</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f7f5;
+      color: #222;
+    }
+
+    header {
+      background: #ffffff;
+      padding: 18px 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .header-content {
+      max-width: 900px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 26px;
+      font-weight: bold;
+      color: #2e7d32;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .hero {
+      background: white;
+      padding: 35px 20px;
+      border-radius: 18px;
+      text-align: center;
+      margin-bottom: 25px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+    }
+
+    .hero h1 {
+      margin-top: 0;
+      font-size: 30px;
+    }
+
+    .hero p {
+      color: #555;
+      font-size: 17px;
+      line-height: 1.5;
+    }
+
+    .actions {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 25px;
+    }
+
+    button {
+      border: none;
+      border-radius: 12px;
+      padding: 14px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .primary {
+      background: #2e7d32;
+      color: white;
+    }
+
+    .secondary {
+      background: #e8f5e9;
+      color: #2e7d32;
+    }
+
+    .danger {
+      background: #eeeeee;
+      color: #333;
+    }
+
+    .section {
+      display: none;
+    }
+
+    .section.active {
+      display: block;
+    }
+
+    h2 {
+      margin-top: 5px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 16px;
+      padding: 18px;
+      margin-bottom: 15px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      margin-bottom: 8px;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 5px 10px;
+      border-radius: 20px;
+      font-size: 13px;
+      margin-bottom: 10px;
+      background: #e8f5e9;
+      color: #2e7d32;
+      font-weight: bold;
+    }
+
+    .price {
+      font-size: 18px;
+      font-weight: bold;
+      color: #2e7d32;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      margin-bottom: 6px;
+      font-weight: bold;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #cccccc;
+      border-radius: 10px;
+      font-size: 16px;
+      background: white;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+
+    .form-actions {
+      margin-top: 22px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .notice {
+      background: #fff8e1;
+      padding: 13px;
+      border-radius: 10px;
+      margin-top: 15px;
+      font-size: 14px;
+      line-height: 1.4;
+    }
+
+    .empty {
+      text-align: center;
+      color: #666;
+      padding: 30px;
+    }
+
+    .quantity-row {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      margin-top: 15px;
+    }
+
+    .quantity-row input {
+      max-width: 90px;
+    }
+
+    footer {
+      text-align: center;
+      color: #777;
+      padding: 30px 20px;
+      font-size: 13px;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 25px;
+      }
+
+      .actions {
+        flex-direction: column;
+      }
+
+      .actions button {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
-<body><div class="app">
+
+<body>
+
 <header>
- <div class="brand"><div class="mark"><i class="c a"></i><i class="c b"></i></div><div><div class="logo">Sav<b>eat</b></div><div class="tag">you save. you eat.</div></div></div>
- <span class="small">0.2</span>
+  <div class="header-content">
+    <div class="logo">Save Eat</div>
+
+    <button class="secondary" onclick="showHome()">
+      Home
+    </button>
+  </div>
 </header>
-<main>
-<section id="home" class="screen active">
- <h1>Il cibo è fatto per essere mangiato, non buttato.</h1>
- <p class="lead">Condividi gratuitamente ciò che non consumerai oppure salva qualcosa vicino a te.</p>
- <div class="actions"><button class="btn primary" onclick="go('cerca')">Trova cibo da salvare</button><button class="btn secondary" onclick="go('pubblica')">Ho qualcosa da condividere</button></div>
- <div class="section-title"><b>Da salvare vicino a te</b></div>
- <div class="card" onclick="go('scheda')"><div class="photo">🍪</div><div class="cardbody"><div class="row"><b>Biscotti – confezione integra</b><span class="pill">SAVE NOW</span></div><div class="meta">Zona indicativa • ritiro entro le 19:00</div></div></div>
- <div class="ethic"><b>La regola Saveat</b><br>Prendi solo ciò che pensi davvero di consumare. Non spostiamo lo spreco da una casa all'altra.</div>
-</section>
 
-<section id="cerca" class="screen"><button class="back" onclick="go('home')">← Indietro</button><h2>Trova cibo</h2><input placeholder="Cerca un alimento"><div class="card" onclick="go('scheda')"><div class="photo">🍪</div><div class="cardbody"><b>Biscotti</b><div class="meta">Confezione integra • ritiro oggi</div></div></div></section>
+<main class="container">
 
-<section id="pubblica" class="screen"><button class="back" onclick="go('home')">← Indietro</button><h2>Condividi un alimento</h2>
-<label>Prodotto</label><input placeholder="Es. biscotti">
-<label>Quantità</label><input placeholder="Es. 1 confezione">
-<label>Data sulla confezione</label><input type="date">
-<label>zona</label><input id="zona" placeholder="Comune o zona, non l'indirizzo completo" autocomplete="off">
- <div id="suggerimenti-zona"></div>
-<label>Ritiro entro</label><input type="time">
-<label>Foto</label><input type="file" accept="image/*">
-<p class="small">Foto consigliata. Per il pilota: solo prodotti ammessi dal regolamento Saveat.</p>
-<button class="btn primary" style="width:100%" onclick="alert('Annuncio simulato pubblicato!')">Pubblica e salvalo dallo spreco</button></section>
+  <!-- HOME -->
 
-<section id="scheda" class="screen"><button class="back" onclick="go('cerca')">← Indietro</button><div class="photo" style="border-radius:18px;margin-top:12px">🍪</div><h2>Biscotti</h2><p class="lead">1 confezione integra. Etichetta leggibile. Disponibile gratuitamente.</p><div class="ethic">Zona indicativa prima della prenotazione. I dettagli di ritiro vengono mostrati solo dopo.</div><button class="btn primary" style="width:100%" onclick="go('ritiro')">Prenota</button></section>
+  <section id="home" class="section active">
 
-<section id="ritiro" class="screen"><button class="back" onclick="go('scheda')">← Indietro</button><h2>Ritiro prenotato</h2><p><b>Biscotti</b></p><p class="lead">Qui, nella versione operativa, compariranno indirizzo/punto concordato e fascia oraria, visibili solo a chi ha prenotato.</p><button class="btn primary" style="width:100%" onclick="go('salvato')">Ho ritirato</button><button class="btn ghost" style="width:100%;margin-top:8px" onclick="go('home')">Cancella prenotazione</button></section>
+    <div class="hero">
 
-<section id="salvato" class="screen"><div class="saved">✓</div><h1 style="text-align:center">Salvato.</h1><p class="lead" style="text-align:center">Hai evitato che un alimento diventasse spreco.</p><div class="ethic">Consumalo davvero: il recupero funziona solo se lo spreco non viene semplicemente spostato.</div><button class="btn primary" style="width:100%" onclick="go('home')">Torna alla home</button></section>
+      <h1>Il cibo è fatto per essere mangiato, non buttato.</h1>
 
-<section id="miei" class="screen"><h2>I miei Save</h2><p class="lead">Qui vedrai ciò che hai pubblicato e prenotato.</p></section>
+      <p>
+        Trova alimenti disponibili vicino a te oppure condividi
+        ciò che rischia di diventare uno spreco.
+      </p>
+
+      <div class="actions">
+
+        <button
+          class="primary"
+          onclick="showFind()">
+          Trova cibo da salvare
+        </button>
+
+        <button
+          class="secondary"
+          onclick="showPublish()">
+          Ho qualcosa da condividere
+        </button>
+
+      </div>
+
+    </div>
+
+    <div class="card">
+
+      <h3>Come funziona</h3>
+
+      <p>
+        1. Qualcuno pubblica un alimento disponibile.
+      </p>
+
+      <p>
+        2. Chi è interessato sceglie la quantità.
+      </p>
+
+      <p>
+        3. La quantità disponibile si aggiorna automaticamente.
+      </p>
+
+      <p>
+        4. Le parti si accordano direttamente per il ritiro.
+      </p>
+
+      <p>
+        Save Eat non gestisce magazzino, trasporto o consegna.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- TROVA -->
+
+  <section id="find" class="section">
+
+    <h2>Da salvare vicino a te</h2>
+
+    <p>
+      Prenota solo la quantità che pensi realmente di utilizzare.
+    </p>
+
+    <div id="listings"></div>
+
+  </section>
+
+
+  <!-- PUBBLICA -->
+
+  <section id="publish" class="section">
+
+    <div class="card">
+
+      <h2>Condividi un alimento</h2>
+
+      <form id="publishForm">
+
+        <label for="accountType">
+          Chi pubblica?
+        </label>
+
+        <select id="accountType" required onchange="updateOfferOptions()">
+          <option value="">Seleziona</option>
+          <option value="Privato">Privato</option>
+          <option value="Attività">Attività</option>
+        </select>
+
+
+        <label for="product">
+          Alimento
+        </label>
+
+        <input
+          id="product"
+          type="text"
+          placeholder="Es. Pane, biscotti, mele..."
+          required
+        >
+
+
+        <label for="quantity">
+          Quantità disponibile
+        </label>
+
+        <input
+          id="quantity"
+          type="number"
+          min="1"
+          placeholder="Es. 5"
+          required
+        >
+
+
+        <label for="unit">
+          Unità
+        </label>
+
+        <select id="unit" required>
+          <option value="pezzi">pezzi</option>
+          <option value="confezioni">confezioni</option>
+          <option value="kg">kg</option>
+        </select>
+
+
+        <label for="zone">
+          Zona
+        </label>
+
+        <input
+          id="zone"
+          type="text"
+          placeholder="Es. Verona"
+          required
+        >
+
+
+        <label for="pickup">
+          Disponibile per il ritiro
+        </label>
+
+        <input
+          id="pickup"
+          type="text"
+          placeholder="Es. Oggi dalle 18 alle 20"
+          required
+        >
+
+
+        <label for="offerType">
+          Tipo di offerta
+        </label>
+
+        <select id="offerType" required onchange="togglePrice()">
+          <option value="Donazione">Regalo</option>
+        </select>
+
+
+        <div id="priceArea" style="display:none;">
+
+          <label for="price">
+            Prezzo per unità (€)
+          </label>
+
+          <input
+            id="price"
+            type="number"
+            min="0"
+            step="0.01"
+            placeholder="Es. 2.50"
+          >
+
+        </div>
+
+
+        <label for="notes">
+          Informazioni aggiuntive
+        </label>
+
+        <textarea
+          id="notes"
+          placeholder="Es. confezione integra, scadenza, modalità di ritiro..."
+        ></textarea>
+
+
+        <div class="notice">
+
+          I privati possono condividere gratuitamente le proprie
+          eccedenze. Le attività possono scegliere se regalare
+          oppure vendere il prodotto.
+
+          Il ritiro e l'eventuale pagamento avvengono direttamente
+          tra le parti.
+
+        </div>
+
+
+        <div class="form-actions">
+
+          <button
+            type="submit"
+            class="primary">
+            Pubblica
+          </button>
+
+          <button
+            type="button"
+            class="danger"
+            onclick="showHome()">
+            Annulla
+          </button>
+
+        </div>
+
+      </form>
+
+    </div>
+
+  </section>
+
 </main>
-<nav><button onclick="go('home')">Home</button><button onclick="go('cerca')">Cerca</button><button onclick="go('pubblica')">Pubblica</button><button onclick="go('miei')">I miei Save</button></nav>
-</div>
+
+
+<footer>
+  Save Eat · Salva il cibo. Riduci lo spreco.
+</footer>
+
+
 <script>
- const zone = ["Verona"];
- const inputZona = document.getElementById("zona");
- const suggerimenti = document.getElementById("suggerimenti-zona");
-ninputZona.adeventListener("input", () >
-                           => {
-                            const testo = inputZona.value.trim();
-                            if (!testo) {
-                             return;
-                            }
-                            const lista = suggerimenti.innerHTML= "";
-                            zone.For(zona >
-                                     const li= document.creaElement("li");
-                 document.quli.textContent " zona;
-                 slista.appendChild(li);
-                           }
-                           }
-function go(id){document.querySelectorAll('.screen').forEach(x=>x.classList.remove('active'));document.getElementById(id).classList.add('active');scrollTo(0,0)}
-</script></body></html>
-<!--
-TEST
--->
+
+  const homeSection = document.getElementById("home");
+  const findSection = document.getElementById("find");
+  const publishSection = document.getElementById("publish");
+  const listingsContainer = document.getElementById("listings");
+
+  let listings = JSON.parse(localStorage.getItem("saveEatListings")) || [];
+
+
+  function hideAll() {
+
+    homeSection.classList.remove("active");
+    findSection.classList.remove("active");
+    publishSection.classList.remove("active");
+
+  }
+
+
+  function showHome() {
+
+    hideAll();
+    homeSection.classList.add("active");
+    window.scrollTo(0, 0);
+
+  }
+
+
+  function showFind() {
+
+    hideAll();
+    findSection.classList.add("active");
+
+    renderListings();
+
+    window.scrollTo(0, 0);
+
+  }
+
+
+  function showPublish() {
+
+    hideAll();
+    publishSection.classList.add("active");
+    window.scrollTo(0, 0);
+
+  }
+
+
+  function updateOfferOptions() {
+
+    const accountType =
+      document.getElementById("accountType").value;
+
+    const offerType =
+      document.getElementById("offerType");
+
+
+    if (accountType === "Attività") {
+
+      offerType.innerHTML = `
+        <option value="Donazione">Regalo</option>
+        <option value="Vendita">Vendita</option>
+      `;
+
+    } else {
+
+      offerType.innerHTML = `
+        <option value="Donazione">Regalo</option>
+      `;
+
+    }
+
+    togglePrice();
+
+  }
+
+
+  function togglePrice() {
+
+    const offerType =
+      document.getElementById("offerType").value;
+
+    const priceArea =
+      document.getElementById("priceArea");
+
+    const price =
+      document.getElementById("price");
+
+
+    if (offerType === "Vendita") {
+
+      priceArea.style.display = "block";
+      price.required = true;
+
+    } else {
+
+      priceArea.style.display = "none";
+      price.required = false;
+      price.value = "";
+
+    }
+
+  }
+
+
+  document
+    .getElementById("publishForm")
+    .addEventListener("submit", function(event) {
+
+      event.preventDefault();
+
+
+      const listing = {
+
+        id: Date.now(),
+
+        accountType:
+          document.getElementById("accountType").value,
+
+        product:
+          document.getElementById("product").value,
+
+        quantity:
+          Number(document.getElementById("quantity").value),
+
+        unit:
+          document.getElementById("unit").value,
+
+        zone:
+          document.getElementById("zone").value,
+
+        pickup:
+          document.getElementById("pickup").value,
+
+        offerType:
+          document.getElementById("offerType").value,
+
+        price:
+          document.getElementById("price").value,
+
+        notes:
+          document.getElementById("notes").value
+
+      };
+
+
+      listings.unshift(listing);
+
+      saveListings();
+
+      this.reset();
+
+      updateOfferOptions();
+
+      showFind();
+
+  });
+
+
+  function saveListings() {
+
+    localStorage.setItem(
+      "saveEatListings",
+      JSON.stringify(listings)
+    );
+
+  }
+
+
+  function renderListings() {
+
+    listingsContainer.innerHTML = "";
+
+
+    if (listings.length === 0) {
+
+      listingsContainer.innerHTML = `
+        <div class="card empty">
+          Al momento non ci sono alimenti disponibili.
+          <br><br>
+          Puoi essere il primo a condividere qualcosa.
+        </div>
+      `;
+
+      return;
+
+    }
+
+
+    listings.forEach(function(item) {
+
+      const card =
+        document.createElement("div");
+
+      card.className = "card";
+
+
+      let priceText = "Gratis";
+
+
+      if (item.offerType === "Vendita") {
+
+        priceText =
+          "€ " +
+          Number(item.price).toFixed(2) +
+          " / " +
+          item.unit;
+
+      }
+
+
+      card.innerHTML = `
+
+        <span class="badge">
+          ${item.offerType}
+        </span>
+
+        <h3>
+          ${escapeHtml(item.product)}
+        </h3>
+
+        <p>
+          <strong>Disponibili:</strong>
+          ${item.quantity} ${escapeHtml(item.unit)}
+        </p>
+
+        <p>
+          <strong>Zona:</strong>
+          ${escapeHtml(item.zone)}
+        </p>
+
+        <p>
+          <strong>Ritiro:</strong>
+          ${escapeHtml(item.pickup)}
+        </p>
+
+        <p>
+          <strong>Pubblicato da:</strong>
+          ${escapeHtml(item.accountType)}
+        </p>
+
+        <p class="price">
+          ${priceText}
+        </p>
+
+        ${
+          item.notes
+          ?
+          `<p>${escapeHtml(item.notes)}</p>`
+          :
+          ""
+        }
+
+        <div class="quantity-row">
+
+          <input
+            id="qty-${item.id}"
+            type="number"
+            min="1"
+            max="${item.quantity}"
+            value="1"
+          >
+
+          <button
+            class="primary"
+            onclick="reserveItem(${item.id})">
+            Prenota
+          </button>
+
+        </div>
+
+      `;
+
+
+      listingsContainer.appendChild(card);
+
+    });
+
+  }
+
+
+  function reserveItem(id) {
+
+    const item =
+      listings.find(function(listing) {
+        return listing.id === id;
+      });
+
+
+    if (!item) {
+      return;
+    }
+
+
+    const input =
+      document.getElementById("qty-" + id);
+
+    const requested =
+      Number(input.value);
+
+
+    if (
+      requested < 1 ||
+      requested > item.quantity
+    ) {
+
+      alert("Quantità non disponibile.");
+      return;
+
+    }
+
+
+    item.quantity =
+      item.quantity - requested;
+
+
+    if (item.quantity === 0) {
+
+      listings =
+        listings.filter(function(listing) {
+          return listing.id !== id;
+        });
+
+    }
+
+
+    saveListings();
+
+    renderListings();
+
+
+    alert(
+      "Prenotazione registrata. " +
+      "Ora puoi accordarti direttamente per il ritiro."
+    );
+
+  }
+
+
+  function escapeHtml(text) {
+
+    const div =
+      document.createElement("div");
+
+    div.textContent =
+      String(text);
+
+    return div.innerHTML;
+
+  }
+
+
+  renderListings();
+
+</script>
+
+</body>
+</html>
