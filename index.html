@@ -47,10 +47,8 @@ nav button{flex:1;border:0;background:none;font-size:12px;color:#666;padding:7px
 <label>Prodotto</label><input placeholder="Es. biscotti">
 <label>Quantità</label><input placeholder="Es. 1 confezione">
 <label>Data sulla confezione</label><input type="date">
-<label>Zona</label><input placeholder="Comune o zona, non l'indirizzo completo" list="zone">
- <datalist id="zone">
-  <option value="verona"> verona</option>
- </datalist>
+<label>zona</label><input id="zona" placeholder="Comune o zona, non l'indirizzo completo" autocomplete="off">
+ <div id="suggerimenti-zona"></div>
 <label>Ritiro entro</label><input type="time">
 <label>Foto</label><input type="file" accept="image/*">
 <p class="small">Foto consigliata. Per il pilota: solo prodotti ammessi dal regolamento Saveat.</p>
@@ -67,6 +65,22 @@ nav button{flex:1;border:0;background:none;font-size:12px;color:#666;padding:7px
 <nav><button onclick="go('home')">Home</button><button onclick="go('cerca')">Cerca</button><button onclick="go('pubblica')">Pubblica</button><button onclick="go('miei')">I miei Save</button></nav>
 </div>
 <script>
+ const zone = ["Verona"];
+ const inputZona = document.getElementById("zona");
+ const suggerimenti = document.getElementById("suggerimenti-zona");
+ninputZona.adeventListener("input", () >
+                           => {
+                            const testo = inputZona.value.trim();
+                            if (!testo) {
+                             return;
+                            }
+                            const lista = suggerimenti.innerHTML= "";
+                            zone.For(zona >
+                                     const li= document.creaElement("li");
+                 document.quli.textContent " zona;
+                 slista.appendChild(li);
+                           }
+                           }
 function go(id){document.querySelectorAll('.screen').forEach(x=>x.classList.remove('active'));document.getElementById(id).classList.add('active');scrollTo(0,0)}
 </script></body></html>
 <!--
