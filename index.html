@@ -39,10 +39,10 @@
 <button class="primary full" type="submit">Pubblica e salvalo dallo spreco</button></form></section>
 <section id="scheda" class="screen" hidden><a class="back" href="#cerca">Torna alla ricerca</a><div id="detail"></div></section>
 <section id="miei" class="screen" hidden><h1>I miei Save</h1><div class="tabs"><button id="reservations-tab" class="primary" aria-pressed="true">Prenotazioni</button><button id="listings-tab" class="ghost" aria-pressed="false">Annunci pubblicati</button></div><div id="my-content"></div></section>
-<section id="account" class="screen" hidden><h1>Il tuo account</h1>
+<section id="account" class="screen" hidden><h1 id="account-heading">Accedi a Saveat</h1>
 <form id="auth-form" class="card padded"><label for="email">Email</label><input id="email" type="email" required autocomplete="email" maxlength="254">
 <label for="password">Password</label><input id="password" type="password" required minlength="8" autocomplete="current-password">
-<div class="actions"><button class="primary" name="intent" value="login">Accedi</button><button class="secondary" name="intent" value="signup">Crea account</button><button type="button" id="forgot" class="ghost">Password dimenticata</button></div></form>
+<div class="actions"><button class="primary" name="intent" value="login">Accedi</button><a class="btn secondary" href="#registrati">Non hai un account? Registrati</a><button type="button" id="forgot" class="ghost">Password dimenticata</button><button type="button" id="resend-confirmation" class="ghost" hidden>Invia di nuovo la conferma email</button></div></form>
 <form id="profile-form" class="card padded" hidden><h2>Profilo</h2><label for="display-name">Il tuo nome</label><input id="display-name" required minlength="2" maxlength="100" autocomplete="name">
 <label for="account-type">Tipo di account</label><select id="account-type"><option value="private">Privato</option><option value="business">Attività / azienda agricola</option></select>
 <div id="business-field" hidden><label for="business-name">Nome dell’attività</label><input id="business-name" minlength="2" maxlength="150"></div>
@@ -50,6 +50,17 @@
 <button class="primary">Salva profilo</button><button type="button" id="logout" class="ghost">Esci</button></form>
 <form id="reset-form" class="card padded" hidden><label for="new-password">Nuova password</label><input id="new-password" type="password" required minlength="8" autocomplete="new-password"><button class="primary">Aggiorna password</button></form>
 </section>
+<section id="registrati" class="screen" hidden><h1>Registrati su Saveat</h1><p class="lead">Puoi esplorare gli annunci senza account. Registrati per prenotare e condividere alimenti.</p>
+<form id="signup-form" class="card padded">
+<div class="two"><div><label for="signup-first">Nome</label><input id="signup-first" required maxlength="40" autocomplete="given-name"></div><div><label for="signup-last">Cognome</label><input id="signup-last" required maxlength="40" autocomplete="family-name"></div></div>
+<label for="signup-email">Email</label><input id="signup-email" type="email" required maxlength="254" autocomplete="email">
+<label for="signup-password">Password (almeno 8 caratteri)</label><input id="signup-password" type="password" required minlength="8" autocomplete="new-password">
+<label for="signup-repeat">Ripeti la password</label><input id="signup-repeat" type="password" required minlength="8" autocomplete="new-password">
+<label for="signup-type">Ti registri come</label><select id="signup-type"><option value="private">Privato</option><option value="business">Attività / azienda agricola</option></select>
+<div id="signup-business-field" hidden><label for="signup-business">Nome dell’attività</label><input id="signup-business" minlength="2" maxlength="150" autocomplete="organization"></div>
+<p class="small">Privati: condivisione gratuita. Attività: regalo o vendita con pagamento al ritiro. Il tipo di account viene fissato alla prima attivazione del profilo.</p>
+<button class="primary full">Crea il mio account</button><a class="btn ghost full" href="#account">Hai già un account? Accedi</a>
+</form><div id="signup-sent" class="ethic" hidden><b>Controlla la tua email</b><p>Apri il messaggio più recente e conferma l’indirizzo. Poi accedi con email e password. Se avevi scelto un annuncio, potrai riprendere da lì.</p><a class="btn primary" href="#account">Vai all’accesso</a></div></section>
 <section id="setup" class="screen" hidden><h1>Collega Saveat</h1><p class="lead">Esegui prima lo script SQL nel tuo progetto Supabase. Poi inserisci i due valori pubblici del progetto.</p>
 <form id="setup-form" class="card padded"><label for="supabase-url">Project URL</label><input id="supabase-url" type="url" required placeholder="https://…supabase.co"><label for="supabase-key">Publishable key / anon key</label><input id="supabase-key" required autocomplete="off"><p class="small">Usa solo la chiave pubblica. Non inserire secret key o service_role.</p><button class="primary">Scarica config.js</button></form><p>Sostituisci config.js nella cartella del sito con il file scaricato, quindi ricarica.</p></section>
 </main>
