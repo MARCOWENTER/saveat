@@ -45,15 +45,15 @@ Documentazione: [chiavi API](https://supabase.com/docs/guides/getting-started/ap
 ## Funzioni incluse
 
 - Registrazione email/password, conferma email, login, logout e recupero password.
-- Profilo privato oppure attività/azienda agricola. Il tipo è autodichiarato e fissato al primo salvataggio; non equivale a verifica dell’attività. Privati solo regalo; attività regalo o vendita, con pagamento diretto al ritiro.
+- Profilo privato oppure attività/azienda agricola. Il tipo è autodichiarato e fissato al primo salvataggio; non equivale a verifica dell’attività. Privati e attività possono scegliere Dona o Vendi; in caso di vendita indicano il prezzo per unità, con pagamento diretto al ritiro.
 - Annunci con 1–20 prodotti, quantità per prodotto, prezzo per unità, foto JPG/PNG/WebP fino a 5 MB, date in etichetta e allergeni.
 - Ricerca per titolo o alimento e comune, suggerimenti da elenco ISTAT completo.
 - Prenotazione di più prodotti dello stesso annuncio in una sola transazione. Blocco dell’annuncio prima di verificare e decrementare disponibilità; rollback completo se un prodotto è insufficiente. UUID di richiesta per evitare doppio decremento in caso di retry.
-- Prenotato → confermato dal pubblicante → ritirato dal pubblicante; annullamento da entrambe le parti con restituzione della quantità una sola volta; scadenza al termine della fascia di ritiro; chiusura dell’annuncio con annullamento delle prenotazioni attive.
+- Prenotazione confermata automaticamente → cliente segnala «Ho ritirato» → pubblicante conferma il ritiro; annullamento da entrambe le parti con restituzione della quantità una sola volta; scadenza al termine della fascia di ritiro; chiusura dell’annuncio con annullamento delle prenotazioni attive.
 - Indirizzo e contatto privati, visibili solo al pubblicante e al prenotante finché la prenotazione è attiva. Nello storico concluso il cliente non riceve più quei dettagli.
 - Quantità frazionate per kg/litri; intere per pezzi/confezioni. I prodotti con data “da consumare entro” devono essere ritirati entro quella data.
 
-La scadenza viene applicata in base all’ora del database: l’interfaccia e le funzioni mostrano `expired` al termine del ritiro senza richiedere cron. Le righe grezze possono conservare `reserved`/`confirmed` fino alla successiva operazione; la disponibilità non viene riproposta dopo la scadenza dell’annuncio.
+La scadenza viene applicata in base all’ora del database: l’interfaccia e le funzioni mostrano `expired` al termine del ritiro senza richiedere cron. Le righe grezze possono conservare `reserved`/`confirmed` fino alla successiva operazione; il residuo può essere rimesso online modificando lo stesso annuncio con un nuovo termine di ritiro; le prenotazioni scadute non tornano attive.
 
 ## Verifica prima di aprire agli utenti
 
@@ -69,9 +69,17 @@ Il lancio pubblico richiede anche il regolamento alimenti ammessi del pilota, in
 
 ## Limiti operativi
 
-Non sono inclusi chat, notifiche automatiche, mappa, consegna, pagamenti online, moderazione o verifica documentale. Le prenotazioni ricevute si controllano in I miei Save. Lo storico mostra le ultime 100 pubblicazioni; la ricerca pagina 20 annunci per volta. Foto caricate prima di una pubblicazione fallita possono restare inutilizzate: prevedere una pulizia amministrativa degli oggetti orfani. Le foto sono pubbliche: non caricare contatti, indirizzi o persone.
+Non sono inclusi chat, notifiche push a sito chiuso, mappa, consegna, pagamenti online, moderazione o verifica documentale. Gli avvisi dentro Saveat sono presenti; l’invio email resta in attesa del collegamento Brevo e del servizio di invio. Le prenotazioni ricevute si controllano in I miei Save. Lo storico mostra le ultime 100 pubblicazioni; la ricerca pagina 20 annunci per volta. Foto caricate prima di una pubblicazione fallita possono restare inutilizzate: prevedere una pulizia amministrativa degli oggetti orfani. Le foto sono pubbliche: non caricare contatti, indirizzi o persone.
 
 ## Fonti e licenze
 
 - [Dataset ISTAT](https://www.istat.it/classificazione/codici-dei-comuni-delle-province-e-delle-regioni/): file XLSX aggiornato al 21 febbraio 2026, 7.894 comuni. Incorporato nello script; non richiede download all’avvio. Attribution: Istat, riuso secondo le condizioni [note legali ISTAT](https://www.istat.it/note-legali/).
 - Supabase JS 2.117.3, copia locale della distribuzione UMD ufficiale, licenza MIT (vedi `SUPABASE-LICENSE.txt`).
+
+## Foto e donazioni del residuo (12 ottobre 2026)
+
+Le foto sono mostrate intere e adattate in proporzione. Aggiungi foto sceglie dalla galleria; Scatta foto richiede la fotocamera sui telefoni compatibili. JPG/PNG/WebP fino a 25 MB vengono adattati prima dell’invio (massimo 5 MB); HEIC non leggibili richiedono conversione in JPG.
+
+In Modifica ogni alimento offre Dona/Vendi e prezzo unitario per le nuove prenotazioni. Quantità totale include quelle già ritirate: per 5 confezioni, 3 ritirate e 2 rimaste, lascia 5 e scegli Dona. Se la fascia è scaduta, imposta un nuovo termine. I ritiri segnalati devono prima essere confermati; il rinnovo non supera la scadenza alimentare. Le vecchie ricevute conservano prezzo e fascia iniziale.
+
+Per aggiornare un database esistente usare aggiornamento-foto-donazioni.sql dopo le migrazioni precedenti; supabase.sql contiene già la versione completa.

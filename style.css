@@ -12,3 +12,6 @@
 .summary-group h3,.summary-history summary{font-size:1.15rem;margin:22px 0 12px}.summary-history{margin:18px 0;border-top:1px solid #d9ddd8;padding-top:12px}.summary-history summary{cursor:pointer;font-weight:700}.count{display:inline-block;border-radius:20px;padding:2px 9px;background:#e8efe5}.unavailable-alert{background:#fff0e9;border:2px solid #aa452b;color:#71301e;padding:16px;border-radius:12px;margin:14px 0}.unavailable-alert a{display:block;font-weight:700;margin-top:8px}.notification-unread{border:2px solid #aa452b}.pending-pickup{background:#fff6d8;padding:12px;border-radius:10px}header{flex-wrap:wrap;gap:8px}#notifications-button{margin-left:auto;font-size:.85rem}.state-cancelled,.state-expired{border-left:4px solid #898c88}.summary-history .pill{background:#eee;color:#444}
 
 .owner-actions{border-top:1px solid #d9ddd8;padding-top:12px;margin-top:12px}.danger{color:#a33022!important;border-color:#a33022!important}input:disabled,select:disabled,textarea:disabled{opacity:.7;background:#f2f2ed}
+
+/* Mostra sempre tutta la foto, mantenendo le proporzioni originali. */
+.photo{height:auto;max-height:480px;object-fit:contain}.photo-preview{margin-top:12px;max-height:300px}.photo-picker .row{flex-wrap:wrap}

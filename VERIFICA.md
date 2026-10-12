@@ -37,3 +37,11 @@ Non si dichiara questo MVP già online o certificato pronto per la produzione. L
 ## Collegamento remoto verificato
 
 Project URL e chiave pubblica inseriti. API Supabase raggiungibile: lettura del comune Verona riuscita e funzione saveat_search eseguita correttamente, con elenco vuoto in assenza di annunci. Auth, upload foto e prenotazioni fra account reali restano da verificare. Nessuna pubblicazione effettuata.
+
+## Registrazione separata
+
+Aggiunti modulo Registrati con nome e cognome, email, doppia password e tipo account, ritorno all’annuncio dopo accesso, invio manuale di nuova conferma e messaggi italiani per errori Auth. Dati nome/cognome conservati nei metadati Auth; profilo pubblico compatibile con lo schema esistente. Verificati localmente sei aspetti del percorso con un client Auth simulato, senza inviare email di test. Il limite del servizio email Supabase resta indipendente da queste modifiche.
+
+### Foto e residuo, 12/10/2026
+
+21 scenari database locali passati (PGlite Auth/Storage simulati), inclusi 5 iniziali/3 ritirati/2 gratuiti, prezzi e date delle ricevute conservati, rinnovo e restituzione scaduti senza doppio stock, foto limitate al proprietario. Foto 4000x3000 adattata a 1800x1350, scelta galleria distinta da capture environment. Supabase remoto: migrazione riuscita, «Success. No rows returned». Fotocamera fisica e flusso autenticato sul telefono richiedono prova reale; non simulata come verifica hardware.
