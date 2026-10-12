@@ -17,3 +17,5 @@
 .photo{height:auto;max-height:480px;object-fit:contain}.photo-preview{margin-top:12px;max-height:300px}.photo-picker .row{flex-wrap:wrap}
 
 .impact-card{border-left:4px solid var(--green);margin:20px 0}.impact-total{font-size:clamp(1.8rem,6vw,2.6rem);font-weight:800;color:var(--green);margin:6px 0}.impact-card summary{cursor:pointer}
+
+.container-check{display:flex;align-items:center;gap:10px}.container-check input[type=checkbox]{width:20px;height:20px;margin:0;padding:0;flex:none}.pickup-container{font-weight:600;color:var(--green)}

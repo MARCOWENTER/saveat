@@ -87,3 +87,7 @@ Per aggiornare un database esistente usare aggiornamento-foto-donazioni.sql dopo
 ## Contatore kg salvati
 
 La Home mostra il totale indicativo dei ritiri completati e confermati, includendo vendite e donazioni. Peso per unità facoltativo in grammi nella pubblicazione/modifica. Per kg si usa la quantità; senza peso si stimano 500 g per pezzo/confezione e 1 kg per litro. Pesi e totali dei ritiri conclusi si conservano nello storico anche dopo modifica/eliminazione dell’annuncio. Per database esistente applicare aggiornamento-contatore.sql dopo le precedenti migrazioni; supabase.sql lo include già.
+
+## Borsa e contenitore per il ritiro
+
+Promemoria sempre visibile nell’annuncio e nelle prenotazioni attive: Porta sempre una borsa per il ritiro. Confezioni: confezione inclusa. Per pezzi/kg/litri, casella Fornisco io il contenitore; se non selezionata, chi prenota vede Porta anche un contenitore. La scelta è per alimento e si modifica dal proprio annuncio; le prenotazioni già effettuate conservano la promessa iniziale. I dati antecedenti senza indicazione restano Contenitore da concordare, finché aggiornati dal proprietario. Per aggiornamento database: aggiornamento-contenitore.sql dopo aggiornamento-contatore.sql; supabase.sql lo include.

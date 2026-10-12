@@ -49,3 +49,7 @@ Aggiunti modulo Registrati con nome e cognome, email, doppia password e tipo acc
 ### Contatore kg salvati
 
 25 scenari database locali passati, compreso conteggio kg/peso indicato/stime; solo ritiri completati, retry senza doppio conteggio, totali conservati dopo modifica ed eliminazione; pubblico riceve esclusivamente totali aggregati. Nessuna prenotazione reale creata per test.
+
+### Borsa e contenitore
+
+26 scenari database locali passati: confezioni incluse, cibo sfuso con/senza contenitore, snapshot per prenotazione conservato dopo modifica ed eliminazione, scrittura diretta negata. UI: casella per sfuso, testo esplicativo, confezioni senza campo extra, promemoria borsa e riepilogo multi-alimento; dati precedenti senza indicazione non inventati. Regressioni accesso/cambio account/ricerca e Dona-Vendi passate.
