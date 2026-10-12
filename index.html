@@ -4,8 +4,8 @@
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' https://*.supabase.co blob: data:; connect-src 'self' https://*.supabase.co wss://*.supabase.co; object-src 'none'; base-uri 'self'; form-action 'self'">
 <title>Saveat · you save. you eat.</title><meta name="description" content="Condividi le eccedenze e trova cibo da salvare nel tuo comune.">
-<link rel="icon" href="favicon.svg"><link rel="stylesheet" href="style.css?v=customer6">
-<script defer src="config.js"></script><script defer src="supabase.js"></script><script defer src="app.js?v=customer6"></script>
+<link rel="icon" href="favicon.svg"><link rel="stylesheet" href="style.css?v=geo7">
+<script defer src="config.js"></script><script defer src="supabase.js"></script><script defer src="geo.js?v=geo7"></script><script defer src="app.js?v=geo7"></script>
 </head>
 <body>
 <a class="skip" href="#main">Vai al contenuto</a>
@@ -16,13 +16,13 @@
 <section id="home" class="screen">
 <h1>Il cibo è fatto per essere mangiato, non buttato.</h1><p class="lead">Condividi ciò che non consumerai oppure salva qualcosa vicino a te.</p>
 <div class="actions"><a class="btn primary" href="#cerca">Trova cibo da salvare</a><a class="btn secondary" href="#pubblica">Ho qualcosa da condividere</a></div>
-<h2 class="section-title">Da salvare</h2><div id="home-list"></div>
+<div class="card padded"><b>Vicino a te</b><p id="area-status">Scegli un comune o usa la tua posizione</p><div class="row"><a class="btn ghost" href="#cerca">Cambia zona e raggio</a><button id="home-gps" class="primary" type="button">Usa la mia posizione</button></div><p class="small">Distanze indicative dal centro del comune dell’annuncio.</p></div><h2 class="section-title">Da salvare vicino a te</h2><div id="home-list"></div>
 <div class="ethic"><b>La regola Saveat</b><br>Prendi solo ciò che pensi davvero di consumare. Non spostiamo lo spreco da una casa all'altra.</div>
 </section>
 <section id="cerca" class="screen" hidden><h1>Trova cibo</h1>
 <form id="search-form" class="card padded"><label for="search">Alimento</label><input id="search" maxlength="100" placeholder="Pane, biscotti, mele…">
 <label for="search-city">Comune</label><div class="city-picker"><input id="search-city" autocomplete="off" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="search-city-options" placeholder="Inizia a scrivere, es. Ver"><div id="search-city-options" role="listbox" class="suggestions" hidden></div></div>
-<div class="row"><button class="primary">Cerca</button><button type="button" id="clear-search" class="ghost">Tutti i comuni</button></div></form>
+<label for="search-radius">Raggio di ricerca (km)</label><input id="search-radius" type="number" min="1" max="200" required value="20"><p id="search-area-status" class="small"></p><div class="row"><button class="primary">Cerca vicino a me</button><button type="button" id="search-gps" class="ghost">Usa la mia posizione</button><button type="button" id="clear-search" class="ghost">Zona del mio profilo</button></div><p class="small">Distanze indicative dal centro dei comuni. <a href="GEO-FONTI.md" target="_blank" rel="noopener">Fonti geografiche</a></p></form>
 <div id="search-list"></div><button id="load-more" class="ghost" hidden>Mostra altri</button></section>
 <section id="pubblica" class="screen" hidden><h1>Condividi un annuncio</h1><p class="lead">Aggiungi uno o più alimenti. Indirizzo e contatto saranno visibili a chi prenota.</p>
 <form id="publish-form">
@@ -41,9 +41,9 @@
 <form id="auth-form" class="card padded"><label for="email">Email</label><input id="email" type="email" required autocomplete="email" maxlength="254">
 <label for="password">Password</label><input id="password" type="password" required minlength="8" autocomplete="current-password">
 <div class="actions"><button class="primary" name="intent" value="login">Accedi</button><a class="btn secondary" href="#registrati">Non hai un account? Registrati</a><button type="button" id="forgot" class="ghost">Password dimenticata</button><button type="button" id="resend-confirmation" class="ghost" hidden>Invia di nuovo la conferma email</button></div></form>
-<form id="profile-form" class="card padded" hidden><h2>Profilo</h2><label for="display-name">Il tuo nome</label><input id="display-name" required minlength="2" maxlength="100" autocomplete="name">
+<form id="profile-form" class="card padded" hidden><h2>Profilo</h2><p class="small">Account collegato: <b id="profile-email"></b></p><label for="display-name">Il tuo nome</label><input id="display-name" required minlength="2" maxlength="100" autocomplete="name">
 <label for="account-type">Tipo di account</label><select id="account-type"><option value="private">Privato</option><option value="business">Attività / azienda agricola</option></select>
-<div id="business-field" hidden><label for="business-name">Nome dell’attività</label><input id="business-name" minlength="2" maxlength="150"></div>
+<div id="business-field" hidden><label for="business-name">Ragione sociale</label><input id="business-name" minlength="2" maxlength="150"><label for="vat-number">Partita IVA</label><input id="vat-number" inputmode="numeric" pattern="[0-9]{11}" maxlength="11" placeholder="11 cifre"><label for="business-address">Indirizzo della sede</label><input id="business-address" minlength="3" maxlength="300" autocomplete="street-address"><p class="small">Dati autodichiarati, non verificati da Saveat. L’indirizzo della sede è distinto dal punto di ritiro.</p></div><label for="profile-city">Comune di riferimento</label><div class="city-picker"><input id="profile-city" autocomplete="off" required role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="profile-city-options" placeholder="Scegli il comune dai suggerimenti"><div id="profile-city-options" role="listbox" class="suggestions" hidden></div></div><label for="profile-radius">Raggio di interesse (km)</label><input id="profile-radius" type="number" min="1" max="200" value="20" required><p class="small">All’accesso vedrai questa zona. In viaggio potrai scegliere un’altra zona o usare la posizione attuale.</p>
 <p class="small">Il tipo di account viene fissato al primo salvataggio. Un account attività è autodichiarato, non una verifica di Saveat.</p>
 <button class="primary">Salva profilo</button><button type="button" id="logout" class="ghost">Esci</button></form>
 <form id="reset-form" class="card padded" hidden><label for="new-password">Nuova password</label><input id="new-password" type="password" required minlength="8" autocomplete="new-password"><button class="primary">Aggiorna password</button></form>
@@ -55,7 +55,7 @@
 <label for="signup-password">Password (almeno 8 caratteri)</label><input id="signup-password" type="password" required minlength="8" autocomplete="new-password">
 <label for="signup-repeat">Ripeti la password</label><input id="signup-repeat" type="password" required minlength="8" autocomplete="new-password">
 <label for="signup-type">Ti registri come</label><select id="signup-type"><option value="private">Privato</option><option value="business">Attività / azienda agricola</option></select>
-<div id="signup-business-field" hidden><label for="signup-business">Nome dell’attività</label><input id="signup-business" minlength="2" maxlength="150" autocomplete="organization"></div>
+<div id="signup-business-field" hidden><label for="signup-business">Ragione sociale</label><input id="signup-business" minlength="2" maxlength="150" autocomplete="organization"><label for="signup-vat">Partita IVA</label><input id="signup-vat" inputmode="numeric" pattern="[0-9]{11}" maxlength="11" placeholder="11 cifre"><label for="signup-address">Indirizzo della sede</label><input id="signup-address" minlength="3" maxlength="300" autocomplete="street-address"></div><label for="signup-city">Comune di riferimento / sede</label><div class="city-picker"><input id="signup-city" autocomplete="off" required role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="signup-city-options" placeholder="Scegli il comune dai suggerimenti"><div id="signup-city-options" role="listbox" class="suggestions" hidden></div></div><label for="signup-radius">Raggio di interesse (km)</label><input id="signup-radius" type="number" min="1" max="200" value="20" required><p class="small">All’accesso vedrai questa zona. In viaggio potrai scegliere un’altra zona o usare la posizione attuale.</p>
 <p class="small">Puoi donare o vendere, con pagamento al ritiro. Il tipo di account viene fissato alla prima attivazione del profilo.</p>
 <button class="primary full">Crea il mio account</button><a class="btn ghost full" href="#account">Hai già un account? Accedi</a>
 </form><div id="signup-sent" class="ethic" hidden><b>Controlla la tua email</b><p>Apri il messaggio più recente e conferma l’indirizzo. Poi accedi con email e password. Se avevi scelto un annuncio, potrai riprendere da lì.</p><a class="btn primary" href="#account">Vai all’accesso</a></div></section>

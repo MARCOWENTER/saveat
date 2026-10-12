@@ -6,3 +6,5 @@
 .publish-extras{margin:18px 0 6px}.publish-extras summary{cursor:pointer;font-weight:700;color:var(--muted);padding:10px 0}
 
 .summary-tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.summary-tabs button{padding:12px 8px;font-size:14px}.summary-listing{border-left:4px solid var(--orange)}.summary-booked{border-left:4px solid #397cad}.summary-booked .pill{background:#eaf3fa;color:#24587c}.summary-received{border-left:4px solid var(--green)}.summary-received .pill{background:#edf5ee;color:#37623d}
+
+#account-button{display:flex;align-items:center;gap:8px;max-width:62%;text-align:left;padding:9px 12px}.avatar{display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--orange);flex-shrink:0}.identity-text{min-width:0}.identity-text b{display:block;font-size:13px}.identity-text small{display:block;font-size:11px;font-weight:400;overflow-wrap:anywhere}#profile-email{overflow-wrap:anywhere}@media(max-width:430px){header{gap:8px}.logo{font-size:24px}#account-button{max-width:65%;padding:8px}.identity-text small{font-size:10px}}
