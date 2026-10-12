@@ -148,7 +148,6 @@ begin
  for v_item in select value from jsonb_array_elements(p_items) loop
   v_price:=coalesce((v_item->>'price')::numeric,0); v_qty:=(v_item->>'quantity')::numeric;
   if v_qty is null or v_qty<=0 or v_qty<>round(v_qty,3) or v_price<>round(v_price,2) then raise exception 'Quantità o prezzo non validi'; end if;
-  if v_profile.account_type='private' and v_price<>0 then raise exception 'I privati possono solo regalare'; end if;
   if v_item->>'unit' in ('pezzi','confezioni') and v_qty<>trunc(v_qty) then raise exception 'Usa quantità intere per pezzi e confezioni'; end if;
   if v_item->>'date_type'='use_by' and (v_item->>'label_date')::date < (v_end at time zone 'Europe/Rome')::date then raise exception 'Il ritiro deve avvenire entro la data di scadenza'; end if;
   if nullif(v_item->>'photo_path','') is not null and not exists(select 1 from storage.objects where bucket_id='saveat-photos' and name=v_item->>'photo_path' and split_part(name,'/',1)=auth.uid()::text) then raise exception 'Foto non valida'; end if;

@@ -4,8 +4,8 @@
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' https://*.supabase.co blob: data:; connect-src 'self' https://*.supabase.co wss://*.supabase.co; object-src 'none'; base-uri 'self'; form-action 'self'">
 <title>Saveat · you save. you eat.</title><meta name="description" content="Condividi le eccedenze e trova cibo da salvare nel tuo comune.">
-<link rel="icon" href="favicon.svg"><link rel="stylesheet" href="style.css?v=pickup3">
-<script defer src="config.js"></script><script defer src="supabase.js"></script><script defer src="app.js?v=pickup3"></script>
+<link rel="icon" href="favicon.svg"><link rel="stylesheet" href="style.css?v=offer4">
+<script defer src="config.js"></script><script defer src="supabase.js"></script><script defer src="app.js?v=offer4"></script>
 </head>
 <body>
 <a class="skip" href="#main">Vai al contenuto</a>
@@ -26,13 +26,13 @@
 <div id="search-list"></div><button id="load-more" class="ghost" hidden>Mostra altri</button></section>
 <section id="pubblica" class="screen" hidden><h1>Condividi un annuncio</h1><p class="lead">Aggiungi uno o più alimenti. Indirizzo e contatto saranno visibili a chi prenota.</p>
 <form id="publish-form">
-<div class="card padded publish-card"><div id="item-fields"></div><button type="button" id="add-item" class="ghost full">+ Aggiungi alimento</button>
+<div class="card padded publish-card"><label for="offer-mode">Come vuoi condividere?</label><select id="offer-mode"><option value="donate">Dona — gratis</option><option value="sell">Vendi — scegli il prezzo</option></select><div id="item-fields"></div><button type="button" id="add-item" class="ghost full">+ Aggiungi alimento</button>
 <label for="publish-city">Comune</label><div class="city-picker"><input id="publish-city" autocomplete="off" required role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="publish-city-options" placeholder="Inizia a scrivere il comune"><div id="publish-city-options" role="listbox" class="suggestions" hidden></div></div>
 <div class="two"><div><label for="pickup-start">Ritiro da</label><input id="pickup-start" type="datetime-local" required></div><div><label for="pickup-end">Ritiro entro</label><input id="pickup-end" type="datetime-local" required></div></div>
 <label for="address">Indirizzo o punto di incontro</label><input id="address" required minlength="3" maxlength="300" autocomplete="street-address">
 <label for="contact">Contatto per il ritiro</label><input id="contact" required minlength="3" maxlength="200" placeholder="Telefono o altro contatto">
 <details class="publish-extras"><summary>Aggiungi dettagli (facoltativi)</summary><label for="title">Titolo dell’annuncio</label><input id="title" required minlength="2" maxlength="120" placeholder="Si compila con il primo alimento"><label for="description">Descrizione</label><textarea id="description" maxlength="2000" placeholder="Conservazione e informazioni utili"></textarea><label for="instructions">Istruzioni di ritiro</label><textarea id="instructions" maxlength="1000"></textarea></details></div>
-<div class="ethic">I privati condividono gratuitamente. Le attività possono regalare o vendere. Eventuali pagamenti avvengono direttamente al ritiro.</div>
+<div class="ethic">Scegli se donare o vendere. Il prezzo è per unità; il pagamento avviene direttamente al ritiro.</div>
 <label class="check"><input id="food-check" type="checkbox" required> Ho descritto correttamente gli alimenti e le condizioni di conservazione.</label>
 <button class="primary full" type="submit">Pubblica e salvalo dallo spreco</button></form></section>
 <section id="scheda" class="screen" hidden><a class="back" href="#cerca">Torna alla ricerca</a><div id="detail"></div></section>
@@ -56,7 +56,7 @@
 <label for="signup-repeat">Ripeti la password</label><input id="signup-repeat" type="password" required minlength="8" autocomplete="new-password">
 <label for="signup-type">Ti registri come</label><select id="signup-type"><option value="private">Privato</option><option value="business">Attività / azienda agricola</option></select>
 <div id="signup-business-field" hidden><label for="signup-business">Nome dell’attività</label><input id="signup-business" minlength="2" maxlength="150" autocomplete="organization"></div>
-<p class="small">Privati: condivisione gratuita. Attività: regalo o vendita con pagamento al ritiro. Il tipo di account viene fissato alla prima attivazione del profilo.</p>
+<p class="small">Puoi donare o vendere, con pagamento al ritiro. Il tipo di account viene fissato alla prima attivazione del profilo.</p>
 <button class="primary full">Crea il mio account</button><a class="btn ghost full" href="#account">Hai già un account? Accedi</a>
 </form><div id="signup-sent" class="ethic" hidden><b>Controlla la tua email</b><p>Apri il messaggio più recente e conferma l’indirizzo. Poi accedi con email e password. Se avevi scelto un annuncio, potrai riprendere da lì.</p><a class="btn primary" href="#account">Vai all’accesso</a></div></section>
 <section id="setup" class="screen" hidden><h1>Collega Saveat</h1><p class="lead">Esegui prima lo script SQL nel tuo progetto Supabase. Poi inserisci i due valori pubblici del progetto.</p>
