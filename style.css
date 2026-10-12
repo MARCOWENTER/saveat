@@ -15,3 +15,5 @@
 
 /* Mostra sempre tutta la foto, mantenendo le proporzioni originali. */
 .photo{height:auto;max-height:480px;object-fit:contain}.photo-preview{margin-top:12px;max-height:300px}.photo-picker .row{flex-wrap:wrap}
+
+.impact-card{border-left:4px solid var(--green);margin:20px 0}.impact-total{font-size:clamp(1.8rem,6vw,2.6rem);font-weight:800;color:var(--green);margin:6px 0}.impact-card summary{cursor:pointer}

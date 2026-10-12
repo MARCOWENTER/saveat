@@ -45,3 +45,7 @@ Aggiunti modulo Registrati con nome e cognome, email, doppia password e tipo acc
 ### Foto e residuo, 12/10/2026
 
 21 scenari database locali passati (PGlite Auth/Storage simulati), inclusi 5 iniziali/3 ritirati/2 gratuiti, prezzi e date delle ricevute conservati, rinnovo e restituzione scaduti senza doppio stock, foto limitate al proprietario. Foto 4000x3000 adattata a 1800x1350, scelta galleria distinta da capture environment. Supabase remoto: migrazione riuscita, «Success. No rows returned». Fotocamera fisica e flusso autenticato sul telefono richiedono prova reale; non simulata come verifica hardware.
+
+### Contatore kg salvati
+
+25 scenari database locali passati, compreso conteggio kg/peso indicato/stime; solo ritiri completati, retry senza doppio conteggio, totali conservati dopo modifica ed eliminazione; pubblico riceve esclusivamente totali aggregati. Nessuna prenotazione reale creata per test.

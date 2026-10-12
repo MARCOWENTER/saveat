@@ -83,3 +83,7 @@ Le foto sono mostrate intere e adattate in proporzione. Aggiungi foto sceglie da
 In Modifica ogni alimento offre Dona/Vendi e prezzo unitario per le nuove prenotazioni. Quantità totale include quelle già ritirate: per 5 confezioni, 3 ritirate e 2 rimaste, lascia 5 e scegli Dona. Se la fascia è scaduta, imposta un nuovo termine. I ritiri segnalati devono prima essere confermati; il rinnovo non supera la scadenza alimentare. Le vecchie ricevute conservano prezzo e fascia iniziale.
 
 Per aggiornare un database esistente usare aggiornamento-foto-donazioni.sql dopo le migrazioni precedenti; supabase.sql contiene già la versione completa.
+
+## Contatore kg salvati
+
+La Home mostra il totale indicativo dei ritiri completati e confermati, includendo vendite e donazioni. Peso per unità facoltativo in grammi nella pubblicazione/modifica. Per kg si usa la quantità; senza peso si stimano 500 g per pezzo/confezione e 1 kg per litro. Pesi e totali dei ritiri conclusi si conservano nello storico anche dopo modifica/eliminazione dell’annuncio. Per database esistente applicare aggiornamento-contatore.sql dopo le precedenti migrazioni; supabase.sql lo include già.
