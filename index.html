@@ -4,8 +4,8 @@
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' https://*.supabase.co blob: data:; connect-src 'self' https://*.supabase.co wss://*.supabase.co; object-src 'none'; base-uri 'self'; form-action 'self'">
 <title>Saveat · you save. you eat.</title><meta name="description" content="Condividi le eccedenze e trova cibo da salvare nel tuo comune.">
-<link rel="icon" href="favicon.svg"><link rel="stylesheet" href="style.css?v=offer4">
-<script defer src="config.js"></script><script defer src="supabase.js"></script><script defer src="app.js?v=offer4"></script>
+<link rel="icon" href="favicon.svg"><link rel="stylesheet" href="style.css?v=summary5">
+<script defer src="config.js"></script><script defer src="supabase.js"></script><script defer src="app.js?v=summary5"></script>
 </head>
 <body>
 <a class="skip" href="#main">Vai al contenuto</a>
@@ -36,7 +36,7 @@
 <label class="check"><input id="food-check" type="checkbox" required> Ho descritto correttamente gli alimenti e le condizioni di conservazione.</label>
 <button class="primary full" type="submit">Pubblica e salvalo dallo spreco</button></form></section>
 <section id="scheda" class="screen" hidden><a class="back" href="#cerca">Torna alla ricerca</a><div id="detail"></div></section>
-<section id="miei" class="screen" hidden><h1>I miei Save</h1><div class="tabs"><button id="reservations-tab" class="primary" aria-pressed="true">Prenotazioni</button><button id="listings-tab" class="ghost" aria-pressed="false">Annunci pubblicati</button></div><div id="my-content"></div></section>
+<section id="miei" class="screen" hidden><h1>I miei Save</h1><div class="tabs summary-tabs" role="group" aria-label="I tuoi riepiloghi"><button id="listings-tab" class="primary" aria-pressed="true">I miei annunci</button><button id="reservations-tab" class="ghost" aria-pressed="false">Le mie prenotazioni</button><button id="received-tab" class="ghost" aria-pressed="false">Prenotazioni ricevute</button></div><h2 id="my-summary-heading">I miei annunci</h2><p id="my-summary-description" class="lead">Il cibo che hai pubblicato tu, da donare o vendere.</p><div id="my-content"></div></section>
 <section id="account" class="screen" hidden><h1 id="account-heading">Accedi a Saveat</h1>
 <form id="auth-form" class="card padded"><label for="email">Email</label><input id="email" type="email" required autocomplete="email" maxlength="254">
 <label for="password">Password</label><input id="password" type="password" required minlength="8" autocomplete="current-password">
