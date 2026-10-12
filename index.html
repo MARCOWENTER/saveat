@@ -4,8 +4,8 @@
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' https://*.supabase.co blob: data:; connect-src 'self' https://*.supabase.co wss://*.supabase.co; object-src 'none'; base-uri 'self'; form-action 'self'">
 <title>Saveat · you save. you eat.</title><meta name="description" content="Condividi le eccedenze e trova cibo da salvare nel tuo comune.">
-<link rel="icon" href="favicon.svg"><link rel="stylesheet" href="style.css?v=manage11">
-<script defer src="config.js"></script><script defer src="supabase.js"></script><script defer src="geo.js?v=manage11"></script><script defer src="app.js?v=manage11"></script>
+<link rel="icon" href="favicon.svg"><link rel="stylesheet" href="style.css?v=home12">
+<script defer src="config.js"></script><script defer src="supabase.js"></script><script defer src="geo.js?v=home12"></script><script defer src="app.js?v=home12"></script>
 </head>
 <body>
 <a class="skip" href="#main">Vai al contenuto</a>
@@ -42,7 +42,7 @@
 <form id="auth-form" class="card padded"><label for="email">Email</label><input id="email" type="email" required autocomplete="email" maxlength="254">
 <label for="password">Password</label><input id="password" type="password" required minlength="8" autocomplete="current-password">
 <div class="actions"><button class="primary" name="intent" value="login">Accedi</button><a class="btn secondary" href="#registrati">Non hai un account? Registrati</a><button type="button" id="forgot" class="ghost">Password dimenticata</button><button type="button" id="resend-confirmation" class="ghost" hidden>Invia di nuovo la conferma email</button></div></form>
-<form id="profile-form" class="card padded" hidden><h2>Profilo</h2><p class="small">Account collegato: <b id="profile-email"></b></p><label for="display-name">Il tuo nome</label><input id="display-name" required minlength="2" maxlength="100" autocomplete="name">
+<form id="profile-form" class="card padded" hidden><h2>Modifica il profilo</h2><p class="small">I tuoi dati sono già salvati. Cambiali qui solo quando ne hai bisogno.</p><p class="small">Account collegato: <b id="profile-email"></b></p><label for="display-name">Il tuo nome</label><input id="display-name" required minlength="2" maxlength="100" autocomplete="name">
 <label for="account-type">Tipo di account</label><select id="account-type"><option value="private">Privato</option><option value="business">Attività / azienda agricola</option></select>
 <div id="business-field" hidden><label for="business-name">Ragione sociale</label><input id="business-name" minlength="2" maxlength="150"><label for="vat-number">Partita IVA</label><input id="vat-number" inputmode="numeric" pattern="[0-9]{11}" maxlength="11" placeholder="11 cifre"><label for="business-address">Indirizzo della sede</label><input id="business-address" minlength="3" maxlength="300" autocomplete="street-address"><p class="small">Dati autodichiarati, non verificati da Saveat. L’indirizzo della sede è distinto dal punto di ritiro.</p></div><label for="profile-city">Comune di riferimento</label><div class="city-picker"><input id="profile-city" autocomplete="off" required role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="profile-city-options" placeholder="Scegli il comune dai suggerimenti"><div id="profile-city-options" role="listbox" class="suggestions" hidden></div></div><label for="profile-radius">Raggio di interesse (km)</label><input id="profile-radius" type="number" min="1" max="200" value="20" required><p class="small">All’accesso vedrai questa zona. In viaggio potrai scegliere un’altra zona o usare la posizione attuale.</p>
 <p class="small">Il tipo di account viene fissato al primo salvataggio. Un account attività è autodichiarato, non una verifica di Saveat.</p>
