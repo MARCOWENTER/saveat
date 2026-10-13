@@ -99,3 +99,5 @@ La descrizione è mostrata in elenco, dettaglio, propri annunci e ricevute. Modi
 Vendita: Contanti, Carta/POS e Satispay. Metodi mostrati prima di prenotare e nel riepilogo; nessun pagamento gestito dall’app. Donazioni senza campo pagamento. Annunci vecchi senza indicazioni: Da concordare, nessun metodo inventato. Database: aggiornamento-correzioni-pagamenti.sql, già applicato al progetto Saveat; incluso nel supabase.sql completo.
 
 Avvisi dettagliati: applicare aggiornamento-avvisi-dettagliati.sql. Gli annullamenti dei clienti avvisano il pubblicante con nome, alimenti e quantità. Le correzioni mostrano valori prima/dopo. Il profilo apre Modifica profilo / Esci.
+
+Nuove prenotazioni: applicare aggiornamento-prenotazioni-quantita.sql. Avviso privato al pubblicante per vendita/donazione, con cliente e dettagli. Coda mail predisposta; invio email da configurare. Quantità: frecce e tastiera con incremento 1 oppure 0,1; pezzi/confezioni interi.
