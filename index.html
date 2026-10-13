@@ -4,22 +4,23 @@
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' https://*.supabase.co blob: data:; connect-src 'self' https://*.supabase.co wss://*.supabase.co; object-src 'none'; base-uri 'self'; form-action 'self'">
 <title>Saveat · you save. you eat.</title><meta name="description" content="Condividi le eccedenze e trova cibo da salvare nel tuo comune.">
-<link rel="icon" href="favicon.svg"><link rel="stylesheet" href="style.css?v=pickup16">
-<script defer src="config.js"></script><script defer src="supabase.js"></script><script defer src="geo.js?v=pickup16"></script><script defer src="app.js?v=pickup16"></script>
+<link rel="icon" href="favicon.svg"><link rel="stylesheet" href="style.css?v=brand17">
+<script defer src="config.js"></script><script defer src="supabase.js"></script><script defer src="geo.js?v=brand17"></script><script defer src="app.js?v=brand17"></script>
 </head>
 <body>
 <a class="skip" href="#main">Vai al contenuto</a>
 <div class="app">
-<header><a class="brand" href="#home" aria-label="Saveat home"><span class="mark" aria-hidden="true"><i></i><i></i></span><span><span class="logo">Sav<b>eat</b></span><small>you save. you eat.</small></span></a><button id="notifications-button" class="ghost" hidden aria-label="Avvisi">Avvisi</button><button id="account-button" class="ghost">Accedi</button></header>
-<main id="main"><div id="notification-alert" class="unavailable-alert" role="status" hidden></div><section id="avvisi" class="screen" hidden><h1>I tuoi avvisi</h1><p class="lead">Controlla qui gli aggiornamenti sui tuoi ritiri.</p><div id="notifications-list"></div></section>
+<header><a class="brand" href="#home" aria-label="Saveat home"><span class="brand-lockup"><span class="mark" aria-hidden="true"><i class="symbol-plus"></i><i class="symbol-ring"></i></span><span class="logo">sav<b>eat</b></span><small>you save. you eat.</small></span></a><button id="notifications-button" class="ghost" hidden aria-label="Avvisi">Avvisi</button><button id="account-button" class="ghost">Accedi</button></header>
+<main id="main"><button id="back-button" class="ghost back-button" type="button" hidden><span aria-hidden="true">←</span> Indietro</button><div id="notification-alert" class="unavailable-alert" role="status" hidden></div><section id="avvisi" class="screen" hidden><h1>I tuoi avvisi</h1><p class="lead">Controlla qui gli aggiornamenti sui tuoi ritiri.</p><div id="notifications-list"></div></section>
 <div id="message" role="status" aria-live="polite" hidden></div>
 <section id="home" class="screen">
 <h1>Il cibo è fatto per essere mangiato, non buttato.</h1><p class="lead">Condividi ciò che non consumerai oppure salva qualcosa vicino a te.</p>
-<div class="actions"><a class="btn primary" href="#cerca">Trova cibo da salvare</a><a class="btn secondary" href="#pubblica">Ho qualcosa da condividere</a></div>
+<div class="actions"><a class="btn primary" href="#cerca">Trova cibo</a><a class="btn secondary" href="#pubblica">Condividi un alimento</a><a class="btn impact-action" href="#impatto">Il mio impatto</a></div>
 <div class="card padded impact-card"><p class="small">Il cibo che abbiamo salvato insieme</p><p id="impact-total" class="impact-total" aria-live="polite">Calcolo in corso…</p><p id="impact-pickups" class="small"></p><details><summary>Come calcoliamo i kg</summary><p class="small">Contiamo solo i ritiri completati e confermati. I kg sono indicativi: usiamo il peso indicato oppure, se manca, 500 g per pezzo o confezione e circa 1 kg per litro. Le prenotazioni annullate o scadute non contano.</p></details></div>
 <div class="card padded"><b>Vicino a te</b><p id="area-status">Scegli un comune o usa la tua posizione</p><div class="row"><a class="btn ghost" href="#cerca">Cambia zona e raggio</a><button id="home-gps" class="primary" type="button">Usa la mia posizione</button></div><p class="small">Distanze indicative dal centro del comune dell’annuncio.</p></div><h2 class="section-title">Da salvare vicino a te</h2><div id="home-list"></div>
 <div class="ethic"><b>La regola Saveat</b><br>Prendi solo ciò che pensi davvero di consumare. Non spostiamo lo spreco da una casa all'altra.</div>
 </section>
+<section id="impatto" class="screen" hidden><h1>Il mio impatto</h1><p class="lead">Ogni ritiro completato conta.</p><div id="personal-impact" aria-live="polite"></div><p class="small">Contiamo i ritiri completati e confermati in cui hai condiviso o ritirato cibo, una sola volta per prenotazione. Il peso è indicativo e usa le quantità e i pesi conservati nelle ricevute.</p><a class="btn ghost" href="#miei">I miei annunci e ritiri</a></section>
 <section id="cerca" class="screen" hidden><h1>Trova cibo</h1>
 <form id="search-form" class="card padded"><label for="search">Alimento</label><input id="search" maxlength="100" placeholder="Pane, biscotti, mele…">
 <label for="search-city">Comune</label><div class="city-picker"><input id="search-city" autocomplete="off" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="search-city-options" placeholder="Inizia a scrivere, es. Ver"><div id="search-city-options" role="listbox" class="suggestions" hidden></div></div>
@@ -37,7 +38,7 @@
 <div class="ethic">Scegli se donare o vendere. Il prezzo è per unità; il pagamento avviene direttamente al ritiro.</div>
 <label class="check"><input id="food-check" type="checkbox" required> Ho descritto correttamente gli alimenti e le condizioni di conservazione.</label>
 <button class="primary full" type="submit">Pubblica e salvalo dallo spreco</button></form></section>
-<section id="scheda" class="screen" hidden><a class="back" href="#cerca">Torna alla ricerca</a><div id="detail"></div></section>
+<section id="scheda" class="screen" hidden><div id="detail"></div></section>
 <section id="miei" class="screen" hidden><h1>I miei Save</h1><div class="tabs summary-tabs" role="group" aria-label="I tuoi riepiloghi"><button id="listings-tab" class="primary" aria-pressed="true">I miei annunci</button><button id="reservations-tab" class="ghost" aria-pressed="false">Le mie prenotazioni</button><button id="received-tab" class="ghost" aria-pressed="false">Ritiri dei miei annunci</button></div><h2 id="my-summary-heading">I miei annunci</h2><p id="my-summary-description" class="lead">Il cibo che hai pubblicato tu, da donare o vendere.</p><div id="my-content"></div></section>
 <section id="account" class="screen" hidden><h1 id="account-heading">Accedi a Saveat</h1>
 <form id="auth-form" class="card padded"><label for="email">Email</label><input id="email" type="email" required autocomplete="email" maxlength="254">
