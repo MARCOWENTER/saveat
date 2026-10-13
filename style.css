@@ -29,3 +29,5 @@ header{padding-top:18px;padding-bottom:18px;border-bottom:1px solid var(--line)}
 /* Logo definitivo: immagine originale della tavola approvata, senza ridisegno. */
 :root{--orange:#ff7900;--charcoal:#303030}
 .brand-image{display:block;width:180px;max-width:100%;height:auto}.brand{max-width:55%}#account-button{max-width:42%}@media(max-width:360px){.brand-image{width:160px}}
+
+.owner-bookings-panel{border-left:4px solid var(--orange)}.owner-bookings-panel>.row{margin-top:0;align-items:flex-start}.owner-bookings-panel h2{font-size:21px;margin:0;flex:1;min-width:150px}.owner-stock{list-style:none;padding:0;margin:18px 0}.owner-stock li{padding:10px 0;border-bottom:1px solid var(--line)}.owner-booking{padding:12px 0;border-top:1px solid var(--line)}.owner-booking p{margin:6px 0}.owner-booking ul{padding-left:20px;margin:8px 0}.owner-booking .pill{margin:4px 0}.owner-booking{overflow-wrap:anywhere}
