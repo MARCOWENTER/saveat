@@ -57,3 +57,5 @@ Aggiunti modulo Registrati con nome e cognome, email, doppia password e tipo acc
 ## Correzioni complete e pagamenti
 
 Script completo eseguito due volte in PostgreSQL locale PGlite. Casi integrati passati: descrizione/metadata/logistica con prenotazione attiva, conversione pezzi→kg→pezzi con stock corretto, cancellazione idempotente, originale prezzo/quantità/peso e pagamento storico conservati, notifiche private e riattivate, isolamento proprietario/anonimo, minimo impegnato e conversione atomica, scrittura diretta vietata. UI: payload descrizione, allergeni, date e pagamenti verificato, donazione/vendita, foto/avvisi/riepiloghi in regressione; descrizione multilinea escaped e legacy pagamento non inventato. Supabase remoto migrazione: Success. No rows returned. Nessun annuncio reale modificato per prove. Prova completa del modulo con account reale ancora da effettuare.
+
+Avvisi e profilo: controllati valori prima/dopo, destinatario pubblicante per annullamento cliente, nessun duplicato, privacy tra account, menu apertura/chiusura/Escape/uscita.
