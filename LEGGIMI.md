@@ -91,3 +91,9 @@ La Home mostra il totale indicativo dei ritiri completati e confermati, includen
 ## Borsa e contenitore per il ritiro
 
 Promemoria sempre visibile nell’annuncio e nelle prenotazioni attive: Porta sempre una borsa per il ritiro. Confezioni: confezione inclusa. Per pezzi/kg/litri, casella Fornisco io il contenitore; se non selezionata, chi prenota vede Porta anche un contenitore. La scelta è per alimento e si modifica dal proprio annuncio; le prenotazioni già effettuate conservano la promessa iniziale. I dati antecedenti senza indicazione restano Contenitore da concordare, finché aggiornati dal proprietario. Per aggiornamento database: aggiornamento-contenitore.sql dopo aggiornamento-contatore.sql; supabase.sql lo include.
+
+## Correzioni e pagamenti — 13 ottobre 2026
+
+La descrizione è mostrata in elenco, dettaglio, propri annunci e ricevute. Modifica comprende titolo, descrizione, nome, unità, quantità, prezzo/Dona, foto (anche rimozione), data/scadenza, allergeni, peso, contenitore, comune, orari, indirizzo, contatto e istruzioni. Prenotazioni attive ricevono avviso in-app; prezzo e ricevuta iniziale rimangono conservati. Le informazioni correnti sono mostrate a fianco delle correzioni. Per cambio unità con stock già impegnato occorre indicare il fattore di conversione e aggiornare il totale. Quantità totale non inferiore all’impegnato; date coerenti con la scadenza. Correggere un annuncio annullato non lo riapre.
+
+Vendita: Contanti, Carta/POS e Satispay. Metodi mostrati prima di prenotare e nel riepilogo; nessun pagamento gestito dall’app. Donazioni senza campo pagamento. Annunci vecchi senza indicazioni: Da concordare, nessun metodo inventato. Database: aggiornamento-correzioni-pagamenti.sql, già applicato al progetto Saveat; incluso nel supabase.sql completo.

@@ -53,3 +53,7 @@ Aggiunti modulo Registrati con nome e cognome, email, doppia password e tipo acc
 ### Borsa e contenitore
 
 26 scenari database locali passati: confezioni incluse, cibo sfuso con/senza contenitore, snapshot per prenotazione conservato dopo modifica ed eliminazione, scrittura diretta negata. UI: casella per sfuso, testo esplicativo, confezioni senza campo extra, promemoria borsa e riepilogo multi-alimento; dati precedenti senza indicazione non inventati. Regressioni accesso/cambio account/ricerca e Dona-Vendi passate.
+
+## Correzioni complete e pagamenti
+
+Script completo eseguito due volte in PostgreSQL locale PGlite. Casi integrati passati: descrizione/metadata/logistica con prenotazione attiva, conversione pezzi→kg→pezzi con stock corretto, cancellazione idempotente, originale prezzo/quantità/peso e pagamento storico conservati, notifiche private e riattivate, isolamento proprietario/anonimo, minimo impegnato e conversione atomica, scrittura diretta vietata. UI: payload descrizione, allergeni, date e pagamenti verificato, donazione/vendita, foto/avvisi/riepiloghi in regressione; descrizione multilinea escaped e legacy pagamento non inventato. Supabase remoto migrazione: Success. No rows returned. Nessun annuncio reale modificato per prove. Prova completa del modulo con account reale ancora da effettuare.
