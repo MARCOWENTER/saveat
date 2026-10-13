@@ -4,13 +4,13 @@
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' https://*.supabase.co blob: data:; connect-src 'self' https://*.supabase.co wss://*.supabase.co; object-src 'none'; base-uri 'self'; form-action 'self'">
 <title>Saveat · you save. you eat.</title><meta name="description" content="Condividi le eccedenze e trova cibo da salvare nel tuo comune.">
-<link rel="icon" href="favicon.svg"><link rel="stylesheet" href="style.css?v=bookings19">
-<script defer src="config.js"></script><script defer src="supabase.js"></script><script defer src="geo.js?v=bookings19"></script><script defer src="app.js?v=bookings19"></script>
+<link rel="icon" href="favicon.svg"><link rel="stylesheet" href="style.css?v=roles20">
+<script defer src="config.js"></script><script defer src="supabase.js"></script><script defer src="geo.js?v=roles20"></script><script defer src="app.js?v=roles20"></script>
 </head>
 <body>
 <a class="skip" href="#main">Vai al contenuto</a>
 <div class="app">
-<header><a class="brand" href="#home" aria-label="Saveat home"><img class="brand-image" src="logo-definitivo.svg?v=bookings19" width="180" height="87" alt="Saveat — you save. you eat."></a><button id="notifications-button" class="ghost" hidden aria-label="Avvisi">Avvisi</button><button id="account-button" class="ghost">Accedi</button></header>
+<header><a class="brand" href="#home" aria-label="Saveat home"><img class="brand-image" src="logo-definitivo.svg?v=roles20" width="180" height="87" alt="Saveat — you save. you eat."></a><button id="notifications-button" class="ghost" hidden aria-label="Avvisi">Avvisi</button><button id="account-button" class="ghost">Accedi</button></header>
 <main id="main"><button id="back-button" class="ghost back-button" type="button" hidden><span aria-hidden="true">←</span> Indietro</button><div id="notification-alert" class="unavailable-alert" role="status" hidden></div><section id="avvisi" class="screen" hidden><h1>I tuoi avvisi</h1><p class="lead">Controlla qui gli aggiornamenti sui tuoi ritiri.</p><div id="notifications-list"></div></section>
 <div id="message" role="status" aria-live="polite" hidden></div>
 <section id="home" class="screen">
@@ -39,7 +39,7 @@
 <label class="check"><input id="food-check" type="checkbox" required> Ho descritto correttamente gli alimenti e le condizioni di conservazione.</label>
 <button class="primary full" type="submit">Pubblica e salvalo dallo spreco</button></form></section>
 <section id="scheda" class="screen" hidden><div id="detail"></div></section>
-<section id="miei" class="screen" hidden><h1>I miei Save</h1><div class="tabs summary-tabs" role="group" aria-label="I tuoi riepiloghi"><button id="listings-tab" class="primary" aria-pressed="true">I miei annunci</button><button id="reservations-tab" class="ghost" aria-pressed="false">Le mie prenotazioni</button><button id="received-tab" class="ghost" aria-pressed="false">Ritiri dei miei annunci</button></div><h2 id="my-summary-heading">I miei annunci</h2><p id="my-summary-description" class="lead">Il cibo che hai pubblicato tu, da donare o vendere.</p><div id="my-content"></div></section>
+<section id="miei" class="screen" hidden><h1>I miei Save</h1><div class="tabs summary-tabs" role="group" aria-label="I tuoi riepiloghi"><button id="listings-tab" class="primary" aria-pressed="true">I miei annunci</button><button id="reservations-tab" class="ghost" aria-pressed="false">I miei ritiri</button><button id="received-tab" class="ghost" aria-pressed="false">Consegne dei miei annunci</button></div><h2 id="my-summary-heading">I miei annunci</h2><p id="my-summary-description" class="lead">Il cibo che hai pubblicato tu, da donare o vendere.</p><div id="my-content"></div></section>
 <section id="account" class="screen" hidden><h1 id="account-heading">Accedi a Saveat</h1>
 <form id="auth-form" class="card padded"><label for="email">Email</label><input id="email" type="email" required autocomplete="email" maxlength="254">
 <label for="password">Password</label><input id="password" type="password" required minlength="8" autocomplete="current-password">
