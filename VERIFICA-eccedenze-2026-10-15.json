@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-15",
+  "mode": "Browser locale, identità e backend simulati; nessun annuncio reale creato",
+  "checks": [
+    "Schema senza quantità, date e contatti",
+    "Ripresa con quantità vuote",
+    "Vendita e donazione ripristinate",
+    "Unica chiamata atomica per più righe",
+    "Prezzi per riga preservati",
+    "Telefono non inviato",
+    "Dati mancanti espliciti",
+    "Privato conserva flusso normale",
+    "Cliente senza quantità preselezionata",
+    "Conferma consapevole obbligatoria",
+    "Avvertenza dettagli insufficienti visibile"
+  ],
+  "errors": []
+}
