@@ -1,0 +1,45 @@
+{
+  "date": "2026-10-15",
+  "database": {
+    "location": "Supabase remoto qifgkxgahfmioeslphjx",
+    "identity": "Identità sintetiche SQL, non accessi reali email/password",
+    "cleanup": "Transazione annullata con ROLLBACK",
+    "checks": [
+      "Normalizzazione server dei contatti attività",
+      "RLS lettura diretta: contatto attività escluso al cliente",
+      "RPC con indirizzo e contatto sicuro",
+      "Contatti storici preservati e schermati",
+      "Modifica senza telefono nei nuovi avvisi",
+      "Vendita e donazione nello stesso annuncio",
+      "Messaggi guidati cliente e titolare",
+      "Retry senza duplicazione",
+      "Avvisi ai soli destinatari corretti",
+      "Ruoli messaggi e accesso estranei",
+      "Messaggi bloccati dopo completamento",
+      "Resoconti solo dei ritiri completati propri",
+      "Totali dalle ricevute e kg conservati",
+      "Contatti privati invariati",
+      "Limite periodo 366 giorni",
+      "Funzioni private non accessibili ad anonimo"
+    ]
+  },
+  "local": {
+    "checks": [
+      "Sintassi JavaScript",
+      "Messaggio simulato: pulsante inviato disabilitato",
+      "Layout mobile 390 px senza overflow",
+      "Resoconto con 2 righe, 1 ritiro, 3 kg, 5 EUR",
+      "Filtro ruolo senza righe disabilita esportazione",
+      "Download CSV con intestazione e tutte le righe",
+      "CSV senza telefoni o indirizzi",
+      "CSV protetto da formule e quote escape",
+      "Decimali italiani nel CSV",
+      "Resoconto cancellato al cambio account e cambio date"
+    ]
+  },
+  "limitations": [
+    "Nessun ciclo reale con due account autenticati nel browser",
+    "Email non attivate",
+    "Nessuna chat libera né garanzia di risposta immediata"
+  ]
+}
