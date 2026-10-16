@@ -1,0 +1,52 @@
+{
+  "date": "2026-10-16",
+  "decision": {
+    "private": "Pubblica e ritira",
+    "business": "Esercente: pubblica eccedenze e gestisce consegne",
+    "b2b": false
+  },
+  "backend": {
+    "mode": "Test reali PostgreSQL con quattro identità sintetiche, transazione e rollback",
+    "passed": [
+      "Pubblicazione per esercente e privato",
+      "RLS esercente: solo annunci propri",
+      "RLS alimenti altrui invisibili",
+      "Ricerca standard e geografica vuote per esercente",
+      "Prenotazione azienda verso privato rifiutata",
+      "Prenotazione B2B rifiutata",
+      "Identità pubbliche altrui escluse per esercente",
+      "Privato vede e prenota annunci di privati e aziende",
+      "Modifica quantità cliente privato funziona",
+      "Esercente vede consegne e avvisi",
+      "Conferma consegna e resoconto proprietario",
+      "Ricevuta completata cliente preservata",
+      "Storico legacy aziendale leggibile e annullabile",
+      "Modifica quantità aziendale bloccata",
+      "Visitatore può esplorare ma non prenotare senza accesso"
+    ],
+    "postApply": {
+      "testUsersRemaining": 0,
+      "restrictivePolicy": 1,
+      "guardedBookingFunctions": 3,
+      "guardedSearchFunctions": 2
+    }
+  },
+  "ui": {
+    "mode": "Browser locale, codice reale e backend simulato",
+    "checks": "7 controlli per esercente, privato e ospite: 21 PASS",
+    "passed": [
+      "Home esercente senza ricerca né annunci altrui",
+      "Nessuna chiamata ricerca sulla home esercente",
+      "Link diretto ricerca reindirizzato",
+      "Link diretto annuncio altrui non prenotabile",
+      "Annunci propri gestibili",
+      "Privato vede ricerca e modulo prenotazione",
+      "Visitatore mantiene esplorazione",
+      "Mobile 375px senza scorrimento orizzontale"
+    ],
+    "notPerformed": [
+      "Nessuna modifica a ritiri reali",
+      "Nessuna registrazione o accesso con credenziali di utenti reali"
+    ]
+  }
+}
