@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-16",
+  "baseCommit": "1bf1ae727352d2a0e66e989d61423e566ce30e9c",
+  "local": {
+    "checks": 25,
+    "passed": 25,
+    "auth": "simulata",
+    "storage": "simulato",
+    "fileChooser": true,
+    "mobileViewport": 390,
+    "overflow": false
+  },
+  "remote": {
+    "postgresTests": "identità e metadati Storage sintetici, rollback",
+    "passed": true,
+    "migrationApplied": true,
+    "avatarPolicies": 3,
+    "testUsersRemaining": 0,
+    "realStorageUploadTested": false
+  },
+  "pendingApproval": {
+    "action": "Limitare al titolare SELECT/elenco file di saveat-avatars mantenendo bucket pubblico",
+    "status": "bloccato dal controllo automatico di approvazione",
+    "reason": "richiede consenso esplicito per restringere policy persistente in produzione"
+  },
+  "officialLogoUnchanged": true
+}
