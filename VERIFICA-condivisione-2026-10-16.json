@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-16",
+  "baseCommit": "4059e16cc1b5b6b6652c4a3992ac88c6fe98f502",
+  "remoteSourceCompared": true,
+  "localUI": {
+    "backend": "simulato",
+    "checks": 16,
+    "passed": 16,
+    "viewport": 390,
+    "overflow": false
+  },
+  "remotePostgres": {
+    "identities": "sintetiche in transazione annullata",
+    "checks": [
+      "metadati alimento",
+      "offerte miste",
+      "memoria aggiornata",
+      "esclusione quantità e date",
+      "RLS tra account",
+      "prezzi prenotati e stock originali conservati",
+      "rollback atomico",
+      "scrittura diretta negata",
+      "vendita privati",
+      "accesso anonimo negato"
+    ],
+    "passed": true,
+    "migrationApplied": true,
+    "rls": true,
+    "residualTestUsers": 0
+  },
+  "limitations": [
+    "Nessun ciclo nel browser con due account reali email/password",
+    "Fotocamera e GPS fisici non provati"
+  ]
+}
