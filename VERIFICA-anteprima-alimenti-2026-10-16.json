@@ -1,0 +1,17 @@
+{
+  "baseCommit": "318f0047741e2a9d2f94ee818aef824c9c845870",
+  "checks": {
+    "regressions": 14,
+    "focused": 8,
+    "passed": 22,
+    "backend": "simulato"
+  },
+  "mobile": {
+    "viewport": 390,
+    "overflow": false
+  },
+  "maximumPreview": 3,
+  "sqlExecuted": false,
+  "realUserTwoItemListingIdentified": false,
+  "detailsUnchanged": true
+}
