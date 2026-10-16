@@ -1,0 +1,50 @@
+{
+  "date": "2026-10-16",
+  "backend": {
+    "service": "Supabase qifgkxgahfmioeslphjx",
+    "mode": "Identità sintetiche e transazione con rollback",
+    "passed": [
+      "categoria valida e rifiuto non valida",
+      "categoria pubblica senza logo",
+      "aumento e diminuzione disponibilità",
+      "retry idempotente",
+      "rifiuto revisione obsoleta",
+      "disponibilità insufficiente e rollback completo",
+      "tutte quantità zero e rollback",
+      "estraneo: lettura e modifica rifiutate",
+      "storico visibile al proprietario",
+      "avviso proprietario con quantità prima/dopo",
+      "prezzo unitario concordato conservato dopo aumento prezzo annuncio",
+      "conversione unità di magazzino",
+      "rimozione singolo alimento e restituzione quantità",
+      "annullamento dopo modifica ripristina stock corretto",
+      "ritiro segnalato e scaduto rifiutati",
+      "nessun permesso anonimo su modifiche e storico"
+    ],
+    "applied": true,
+    "postApply": {
+      "testUsers": 0,
+      "realChanges": 0,
+      "historyRls": true,
+      "anonEditAllowed": false,
+      "newFunctions": 3
+    }
+  },
+  "ui": {
+    "mode": "Backend simulato locale, funzioni reali interfaccia",
+    "passed": [
+      "8 controlli automatici interfaccia",
+      "modifica due alimenti, totale live",
+      "errore rete conserva quantità",
+      "retry usa stesso request_id",
+      "riepilogo aggiornato dopo conferma",
+      "iscrizione azienda: categoria e anteprima dinamica",
+      "375px nessuno scorrimento orizzontale",
+      "Dialogo 360px, nessuno scorrimento orizzontale"
+    ],
+    "notPerformed": [
+      "Nessuna prenotazione commerciale reale creata o modificata",
+      "Nessuna nuova iscrizione reale effettuata"
+    ]
+  }
+}
