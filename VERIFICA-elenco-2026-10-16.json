@@ -1,0 +1,22 @@
+{
+  "baseCommit": "5a7418c3ad5e2f4513013b017ea4c5f7ea6ad36d",
+  "ui": {
+    "backend": "simulato",
+    "checks": 14,
+    "passed": 14,
+    "mobileViewport": 390,
+    "overflow": false,
+    "detailNavigationVerified": true,
+    "keyboardNavigationVerified": true
+  },
+  "photoPolicy": {
+    "userApproved": true,
+    "applied": true,
+    "ownerOnlyList": true,
+    "bucketPublic": true,
+    "remoteRoleTest": "PASS titolare/estraneo/anonimo, transazione annullata"
+  },
+  "limitations": [
+    "Nessuna nuova prenotazione reale creata"
+  ]
+}
