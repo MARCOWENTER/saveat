@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-19",
+  "baseline": "0192f2e46fc62dd2bbdb05acdc13a1d71b2065f5",
+  "screens": 11,
+  "viewportWidths": [
+    1440,
+    1024,
+    820,
+    390,
+    360
+  ],
+  "layoutAudits": 47,
+  "layoutFailures": 0,
+  "unchangedFiles": 28,
+  "publication": {
+    "items": 2,
+    "emptyQuantities": 2,
+    "submitButtons": 1,
+    "paymentWhenSelling": true
+  },
+  "reservationEditor": {
+    "items": 2,
+    "desktopWidth": 820,
+    "totalAfterChange": "3,60 EUR",
+    "submitted": false
+  },
+  "browserErrors": [],
+  "realMutations": false,
+  "sqlRun": false,
+  "deployment": "pending"
+}

@@ -1,0 +1,949 @@
+[
+  {
+    "screen": "pubblica",
+    "width": 1425,
+    "overflow": false,
+    "uniqueIds": true,
+    "screenWidth": 1296,
+    "mainWidth": 1360,
+    "formsNotNested": true,
+    "unassociatedControls": [],
+    "panels": [
+      {
+        "class": "publish-layout",
+        "width": 1296,
+        "columns": "739.662px 528.325px"
+      }
+    ],
+    "quantities": [
+      ""
+    ]
+  },
+  {
+    "screen": "miei",
+    "width": 1425,
+    "overflow": false,
+    "uniqueIds": true,
+    "screenWidth": 1296,
+    "mainWidth": 1360,
+    "formsNotNested": true,
+    "unassociatedControls": [],
+    "panels": [
+      {
+        "class": "card padded summary-listing state-available",
+        "width": 1296,
+        "columns": "871.763px 343.438px"
+      },
+      {
+        "class": "card padded summary-listing state-available",
+        "width": 1296,
+        "columns": "871.763px 343.438px"
+      },
+      {
+        "class": "card padded summary-listing state-cancelled",
+        "width": 0,
+        "columns": "871.763px 343.438px"
+      }
+    ],
+    "quantities": [
+      ""
+    ]
+  },
+  {
+    "screen": "miei",
+    "width": 1425,
+    "overflow": false,
+    "uniqueIds": true,
+    "screenWidth": 1296,
+    "mainWidth": 1360,
+    "formsNotNested": true,
+    "unassociatedControls": [],
+    "panels": [
+      {
+        "class": "card padded summary-booked",
+        "width": 1296,
+        "columns": "489.237px 425.425px 276.525px"
+      },
+      {
+        "class": "card padded summary-booked",
+        "width": 1296,
+        "columns": "489.237px 425.425px 276.525px"
+      },
+      {
+        "class": "card padded summary-booked",
+        "width": 0,
+        "columns": "489.237px 425.425px 276.525px"
+      },
+      {
+        "class": "card padded summary-booked",
+        "width": 0,
+        "columns": "489.237px 425.425px 276.525px"
+      },
+      {
+        "class": "card padded summary-booked",
+        "width": 0,
+        "columns": "489.237px 425.425px 276.525px"
+      }
+    ],
+    "quantities": [
+      ""
+    ]
+  },
+  {
+    "screen": "miei",
+    "width": 1425,
+    "overflow": false,
+    "uniqueIds": true,
+    "screenWidth": 1296,
+    "mainWidth": 1360,
+    "formsNotNested": true,
+    "unassociatedControls": [],
+    "panels": [
+      {
+        "class": "card padded summary-received",
+        "width": 1296,
+        "columns": "489.237px 425.425px 276.525px"
+      }
+    ],
+    "quantities": [
+      ""
+    ]
+  },
+  {
+    "screen": "modifica",
+    "width": 1425,
+    "overflow": false,
+    "uniqueIds": true,
+    "screenWidth": 1296,
+    "mainWidth": 1360,
+    "formsNotNested": true,
+    "unassociatedControls": [],
+    "panels": [
+      {
+        "class": "edit-layout",
+        "width": 1296,
+        "columns": "716.688px 551.3px"
+      }
+    ],
+    "quantities": [
+      ""
+    ]
+  },
+  {
+    "screen": "account",
+    "width": 1425,
+    "overflow": false,
+    "uniqueIds": true,
+    "screenWidth": 1296,
+    "mainWidth": 1360,
+    "formsNotNested": true,
+    "unassociatedControls": [],
+    "panels": [
+      {
+        "class": "profile-layout",
+        "width": 1238.4000244140625,
+        "columns": "605.2px 605.2px"
+      }
+    ],
+    "quantities": [
+      ""
+    ]
+  },
+  {
+    "screen": "registrati",
+    "width": 1425,
+    "overflow": false,
+    "uniqueIds": true,
+    "screenWidth": 1296,
+    "mainWidth": 1360,
+    "formsNotNested": true,
+    "unassociatedControls": [],
+    "panels": [
+      {
+        "class": "profile-layout",
+        "width": 1238.4000244140625,
+        "columns": "605.2px 605.2px"
+      }
+    ],
+    "quantities": [
+      ""
+    ]
+  },
+  {
+    "screen": "home",
+    "width": 1425,
+    "overflow": false,
+    "uniqueIds": true,
+    "screenWidth": 1296,
+    "mainWidth": 1360,
+    "formsNotNested": true,
+    "unassociatedControls": [],
+    "panels": [],
+    "quantities": [
+      ""
+    ]
+  },
+  {
+    "screen": "cerca",
+    "width": 1425,
+    "overflow": false,
+    "uniqueIds": true,
+    "screenWidth": 1296,
+    "mainWidth": 1360,
+    "formsNotNested": true,
+    "unassociatedControls": [],
+    "panels": [],
+    "quantities": [
+      ""
+    ]
+  },
+  {
+    "screen": "scheda",
+    "width": 1425,
+    "overflow": false,
+    "uniqueIds": true,
+    "screenWidth": 1296,
+    "mainWidth": 1360,
+    "formsNotNested": true,
+    "unassociatedControls": [],
+    "panels": [
+      {
+        "class": "detail-layout",
+        "width": 1296,
+        "columns": "779.537px 472.462px"
+      }
+    ],
+    "quantities": [
+      ""
+    ]
+  },
+  {
+    "screen": "avvisi",
+    "width": 1425,
+    "overflow": false,
+    "uniqueIds": true,
+    "screenWidth": 1296,
+    "mainWidth": 1360,
+    "formsNotNested": true,
+    "unassociatedControls": [],
+    "panels": [],
+    "quantities": [
+      ""
+    ]
+  },
+  {
+    "screen": "impatto",
+    "width": 1425,
+    "overflow": false,
+    "uniqueIds": true,
+    "screenWidth": 1296,
+    "mainWidth": 1360,
+    "formsNotNested": true,
+    "unassociatedControls": [],
+    "panels": [],
+    "quantities": [
+      ""
+    ]
+  },
+  {
+    "screen": "setup",
+    "width": 1425,
+    "overflow": false,
+    "uniqueIds": true,
+    "screenWidth": 1000,
+    "mainWidth": 1360,
+    "formsNotNested": true,
+    "unassociatedControls": [],
+    "panels": [],
+    "quantities": [
+      ""
+    ]
+  },
+  {
+    "screen": "home",
+    "width": 375,
+    "overflow": false,
+    "uniqueIds": true,
+    "screenWidth": 339.20001220703125,
+    "mainWidth": 375,
+    "formsNotNested": true,
+    "unassociatedControls": [],
+    "panels": [],
+    "quantities": [
+      ""
+    ]
+  },
+  {
+    "screen": "cerca",
+    "width": 375,
+    "overflow": false,
+    "uniqueIds": true,
+    "screenWidth": 339.20001220703125,
+    "mainWidth": 375,
+    "formsNotNested": true,
+    "unassociatedControls": [],
+    "panels": [],
+    "quantities": [
+      ""
+    ]
+  },
+  {
+    "screen": "pubblica",
+    "width": 375,
+    "overflow": false,
+    "uniqueIds": true,
+    "screenWidth": 339.20001220703125,
+    "mainWidth": 375,
+    "formsNotNested": true,
+    "unassociatedControls": [],
+    "panels": [
+      {
+        "class": "publish-layout",
+        "width": 339.20001220703125,
+        "columns": "339.2px"
+      }
+    ],
+    "quantities": [
+      ""
+    ]
+  },
+  {
+    "screen": "miei",
+    "width": 375,
+    "overflow": false,
+    "uniqueIds": true,
+    "screenWidth": 339.20001220703125,
+    "mainWidth": 375,
+    "formsNotNested": true,
+    "unassociatedControls": [],
+    "panels": [
+      {
+        "class": "card padded summary-received",
+        "width": 339.20001220703125,
+        "columns": "none"
+      }
+    ],
+    "quantities": [
+      ""
+    ]
+  },
+  {
+    "screen": "modifica",
+    "width": 375,
+    "overflow": false,
+    "uniqueIds": true,
+    "screenWidth": 339.20001220703125,
+    "mainWidth": 375,
+    "formsNotNested": true,
+    "unassociatedControls": [],
+    "panels": [
+      {
+        "class": "edit-layout",
+        "width": 339.20001220703125,
+        "columns": "339.2px"
+      }
+    ],
+    "quantities": [
+      ""
+    ]
+  },
+  {
+    "screen": "account",
+    "width": 375,
+    "overflow": false,
+    "uniqueIds": true,
+    "screenWidth": 339.20001220703125,
+    "mainWidth": 375,
+    "formsNotNested": true,
+    "unassociatedControls": [],
+    "panels": [
+      {
+        "class": "profile-layout",
+        "width": 293.6000061035156,
+        "columns": "293.6px"
+      }
+    ],
+    "quantities": [
+      ""
+    ]
+  },
+  {
+    "screen": "registrati",
+    "width": 375,
+    "overflow": false,
+    "uniqueIds": true,
+    "screenWidth": 339.20001220703125,
+    "mainWidth": 375,
+    "formsNotNested": true,
+    "unassociatedControls": [],
+    "panels": [
+      {
+        "class": "profile-layout",
+        "width": 293.6000061035156,
+        "columns": "293.6px"
+      }
+    ],
+    "quantities": [
+      ""
+    ]
+  },
+  {
+    "screen": "scheda",
+    "width": 375,
+    "overflow": false,
+    "uniqueIds": true,
+    "screenWidth": 339.20001220703125,
+    "mainWidth": 375,
+    "formsNotNested": true,
+    "unassociatedControls": [],
+    "panels": [
+      {
+        "class": "detail-layout",
+        "width": 339.20001220703125,
+        "columns": "339.2px"
+      }
+    ],
+    "quantities": [
+      ""
+    ]
+  },
+  {
+    "screen": "avvisi",
+    "width": 375,
+    "overflow": false,
+    "uniqueIds": true,
+    "screenWidth": 339.20001220703125,
+    "mainWidth": 375,
+    "formsNotNested": true,
+    "unassociatedControls": [],
+    "panels": [],
+    "quantities": [
+      ""
+    ]
+  },
+  {
+    "screen": "impatto",
+    "width": 375,
+    "overflow": false,
+    "uniqueIds": true,
+    "screenWidth": 339.20001220703125,
+    "mainWidth": 375,
+    "formsNotNested": true,
+    "unassociatedControls": [],
+    "panels": [],
+    "quantities": [
+      ""
+    ]
+  },
+  {
+    "screen": "pubblica",
+    "width": 1009,
+    "overflow": false,
+    "uniqueIds": true,
+    "screenWidth": 944.7999877929688,
+    "mainWidth": 1009,
+    "formsNotNested": true,
+    "unassociatedControls": [],
+    "panels": [
+      {
+        "class": "publish-layout",
+        "width": 944.7999877929688,
+        "columns": "534.787px 382px"
+      }
+    ],
+    "quantities": [
+      ""
+    ]
+  },
+  {
+    "screen": "account",
+    "width": 1009,
+    "overflow": false,
+    "uniqueIds": true,
+    "screenWidth": 944.7999877929688,
+    "mainWidth": 1009,
+    "formsNotNested": true,
+    "unassociatedControls": [],
+    "panels": [
+      {
+        "class": "profile-layout",
+        "width": 887.2000122070312,
+        "columns": "429.6px 429.6px"
+      }
+    ],
+    "quantities": [
+      ""
+    ]
+  },
+  {
+    "screen": "miei",
+    "width": 1009,
+    "overflow": false,
+    "uniqueIds": true,
+    "screenWidth": 944.7999877929688,
+    "mainWidth": 1009,
+    "formsNotNested": true,
+    "unassociatedControls": [],
+    "panels": [
+      {
+        "class": "card padded summary-listing state-available",
+        "width": 944.7999877929688,
+        "columns": "619.825px 244.163px"
+      },
+      {
+        "class": "card padded summary-listing state-available",
+        "width": 944.7999877929688,
+        "columns": "619.825px 244.163px"
+      },
+      {
+        "class": "card padded summary-listing state-available",
+        "width": 944.7999877929688,
+        "columns": "619.825px 244.163px"
+      },
+      {
+        "class": "card padded summary-listing state-available",
+        "width": 944.7999877929688,
+        "columns": "619.825px 244.163px"
+      },
+      {
+        "class": "card padded summary-listing state-available",
+        "width": 944.7999877929688,
+        "columns": "619.825px 244.163px"
+      }
+    ],
+    "quantities": [
+      ""
+    ]
+  },
+  {
+    "screen": "impatto",
+    "width": 1009,
+    "overflow": false,
+    "uniqueIds": true,
+    "screenWidth": 944.7999877929688,
+    "mainWidth": 1009,
+    "formsNotNested": true,
+    "unassociatedControls": [],
+    "panels": [],
+    "quantities": [
+      ""
+    ]
+  },
+  {
+    "screen": "pubblica",
+    "width": 1009,
+    "overflow": false,
+    "uniqueIds": true,
+    "screenWidth": 944.7999877929688,
+    "mainWidth": 1009,
+    "formsNotNested": true,
+    "unassociatedControls": [],
+    "panels": [
+      {
+        "class": "publish-layout",
+        "width": 944.7999877929688,
+        "columns": "534.787px 382px"
+      }
+    ],
+    "quantities": [
+      "",
+      ""
+    ]
+  },
+  {
+    "screen": "pubblica",
+    "width": 805,
+    "overflow": false,
+    "uniqueIds": true,
+    "screenWidth": 740.7999877929688,
+    "mainWidth": 805,
+    "formsNotNested": true,
+    "unassociatedControls": [],
+    "panels": [
+      {
+        "class": "publish-layout",
+        "width": 740.7999877929688,
+        "columns": "740.8px"
+      }
+    ],
+    "quantities": [
+      ""
+    ]
+  },
+  {
+    "screen": "miei",
+    "width": 805,
+    "overflow": false,
+    "uniqueIds": true,
+    "screenWidth": 740.7999877929688,
+    "mainWidth": 805,
+    "formsNotNested": true,
+    "unassociatedControls": [],
+    "panels": [
+      {
+        "class": "card padded summary-listing state-available",
+        "width": 740.7999877929688,
+        "columns": "445.325px 222.675px"
+      },
+      {
+        "class": "card padded summary-listing state-available",
+        "width": 740.7999877929688,
+        "columns": "445.325px 222.675px"
+      },
+      {
+        "class": "card padded summary-listing state-cancelled",
+        "width": 0,
+        "columns": "445.325px 222.675px"
+      }
+    ],
+    "quantities": [
+      ""
+    ]
+  },
+  {
+    "screen": "modifica",
+    "width": 805,
+    "overflow": false,
+    "uniqueIds": true,
+    "screenWidth": 740.7999877929688,
+    "mainWidth": 805,
+    "formsNotNested": true,
+    "unassociatedControls": [],
+    "panels": [
+      {
+        "class": "edit-layout",
+        "width": 740.7999877929688,
+        "columns": "740.8px"
+      }
+    ],
+    "quantities": [
+      ""
+    ]
+  },
+  {
+    "screen": "account",
+    "width": 805,
+    "overflow": false,
+    "uniqueIds": true,
+    "screenWidth": 740.7999877929688,
+    "mainWidth": 805,
+    "formsNotNested": true,
+    "unassociatedControls": [],
+    "panels": [
+      {
+        "class": "profile-layout",
+        "width": 695.2000122070312,
+        "columns": "695.2px"
+      }
+    ],
+    "quantities": [
+      ""
+    ]
+  },
+  {
+    "screen": "registrati",
+    "width": 805,
+    "overflow": false,
+    "uniqueIds": true,
+    "screenWidth": 740.7999877929688,
+    "mainWidth": 805,
+    "formsNotNested": true,
+    "unassociatedControls": [],
+    "panels": [
+      {
+        "class": "profile-layout",
+        "width": 695.2000122070312,
+        "columns": "695.2px"
+      }
+    ],
+    "quantities": [
+      ""
+    ]
+  },
+  {
+    "screen": "scheda",
+    "width": 805,
+    "overflow": false,
+    "uniqueIds": true,
+    "screenWidth": 740.7999877929688,
+    "mainWidth": 805,
+    "formsNotNested": true,
+    "unassociatedControls": [],
+    "panels": [
+      {
+        "class": "detail-layout",
+        "width": 740.7999877929688,
+        "columns": "740.8px"
+      }
+    ],
+    "quantities": [
+      ""
+    ]
+  },
+  {
+    "screen": "pubblica",
+    "width": 345,
+    "overflow": false,
+    "uniqueIds": true,
+    "screenWidth": 308.8000183105469,
+    "mainWidth": 345,
+    "formsNotNested": true,
+    "unassociatedControls": [],
+    "panels": [
+      {
+        "class": "publish-layout",
+        "width": 308.8000183105469,
+        "columns": "308.8px"
+      }
+    ],
+    "quantities": [
+      ""
+    ]
+  },
+  {
+    "screen": "miei",
+    "width": 345,
+    "overflow": false,
+    "uniqueIds": true,
+    "screenWidth": 308.8000183105469,
+    "mainWidth": 345,
+    "formsNotNested": true,
+    "unassociatedControls": [],
+    "panels": [
+      {
+        "class": "card padded summary-listing state-available",
+        "width": 308.8000183105469,
+        "columns": "none"
+      },
+      {
+        "class": "card padded summary-listing state-available",
+        "width": 308.8000183105469,
+        "columns": "none"
+      },
+      {
+        "class": "card padded summary-listing state-cancelled",
+        "width": 0,
+        "columns": "none"
+      }
+    ],
+    "quantities": [
+      ""
+    ]
+  },
+  {
+    "screen": "modifica",
+    "width": 345,
+    "overflow": false,
+    "uniqueIds": true,
+    "screenWidth": 308.8000183105469,
+    "mainWidth": 345,
+    "formsNotNested": true,
+    "unassociatedControls": [],
+    "panels": [
+      {
+        "class": "edit-layout",
+        "width": 308.8000183105469,
+        "columns": "308.8px"
+      }
+    ],
+    "quantities": [
+      ""
+    ]
+  },
+  {
+    "screen": "account",
+    "width": 345,
+    "overflow": false,
+    "uniqueIds": true,
+    "screenWidth": 308.8000183105469,
+    "mainWidth": 345,
+    "formsNotNested": true,
+    "unassociatedControls": [],
+    "panels": [
+      {
+        "class": "profile-layout",
+        "width": 263.20001220703125,
+        "columns": "263.2px"
+      }
+    ],
+    "quantities": [
+      ""
+    ]
+  },
+  {
+    "screen": "registrati",
+    "width": 345,
+    "overflow": false,
+    "uniqueIds": true,
+    "screenWidth": 308.8000183105469,
+    "mainWidth": 345,
+    "formsNotNested": true,
+    "unassociatedControls": [],
+    "panels": [
+      {
+        "class": "profile-layout",
+        "width": 263.20001220703125,
+        "columns": "263.2px"
+      }
+    ],
+    "quantities": [
+      ""
+    ]
+  },
+  {
+    "screen": "scheda",
+    "width": 345,
+    "overflow": false,
+    "uniqueIds": true,
+    "screenWidth": 308.8000183105469,
+    "mainWidth": 345,
+    "formsNotNested": true,
+    "unassociatedControls": [],
+    "panels": [
+      {
+        "class": "detail-layout",
+        "width": 308.8000183105469,
+        "columns": "308.8px"
+      }
+    ],
+    "quantities": [
+      ""
+    ]
+  },
+  {
+    "screen": "avvisi",
+    "width": 345,
+    "overflow": false,
+    "uniqueIds": true,
+    "screenWidth": 308.8000183105469,
+    "mainWidth": 345,
+    "formsNotNested": true,
+    "unassociatedControls": [],
+    "panels": [],
+    "quantities": [
+      ""
+    ]
+  },
+  {
+    "screen": "impatto",
+    "width": 345,
+    "overflow": false,
+    "uniqueIds": true,
+    "screenWidth": 308.8000183105469,
+    "mainWidth": 345,
+    "formsNotNested": true,
+    "unassociatedControls": [],
+    "panels": [],
+    "quantities": [
+      ""
+    ]
+  },
+  {
+    "screen": "impatto",
+    "width": 345,
+    "overflow": false,
+    "uniqueIds": true,
+    "screenWidth": 308.8000183105469,
+    "mainWidth": 345,
+    "formsNotNested": true,
+    "unassociatedControls": [],
+    "panels": [],
+    "quantities": [
+      ""
+    ]
+  },
+  {
+    "screen": "account",
+    "width": 345,
+    "overflow": false,
+    "uniqueIds": true,
+    "screenWidth": 308.8000183105469,
+    "mainWidth": 345,
+    "formsNotNested": true,
+    "unassociatedControls": [],
+    "panels": [
+      {
+        "class": "profile-layout",
+        "width": 0,
+        "columns": "none"
+      }
+    ],
+    "quantities": [
+      ""
+    ]
+  },
+  {
+    "screen": "account",
+    "width": 1425,
+    "overflow": false,
+    "uniqueIds": true,
+    "screenWidth": 1296,
+    "mainWidth": 1360,
+    "formsNotNested": true,
+    "unassociatedControls": [],
+    "panels": [
+      {
+        "class": "profile-layout",
+        "width": 0,
+        "columns": "repeat(2, minmax(0px, 1fr))"
+      }
+    ],
+    "quantities": []
+  },
+  {
+    "screen": "miei",
+    "width": 1425,
+    "overflow": false,
+    "uniqueIds": true,
+    "screenWidth": 1296,
+    "mainWidth": 1360,
+    "formsNotNested": true,
+    "unassociatedControls": [],
+    "panels": [
+      {
+        "class": "card padded summary-booked",
+        "width": 1296,
+        "columns": "489.237px 425.425px 276.525px"
+      },
+      {
+        "class": "card padded summary-booked",
+        "width": 1296,
+        "columns": "489.237px 425.425px 276.525px"
+      },
+      {
+        "class": "card padded summary-booked",
+        "width": 1296,
+        "columns": "489.237px 425.425px 276.525px"
+      },
+      {
+        "class": "card padded summary-booked",
+        "width": 0,
+        "columns": "489.237px 425.425px 276.525px"
+      },
+      {
+        "class": "card padded summary-booked",
+        "width": 0,
+        "columns": "489.237px 425.425px 276.525px"
+      }
+    ],
+    "quantities": []
+  },
+  {
+    "screen": "scheda",
+    "width": 1425,
+    "overflow": false,
+    "uniqueIds": true,
+    "screenWidth": 1296,
+    "mainWidth": 1360,
+    "formsNotNested": true,
+    "unassociatedControls": [],
+    "panels": [
+      {
+        "class": "detail-layout",
+        "width": 1296,
+        "columns": "779.537px 472.462px"
+      }
+    ],
+    "quantities": []
+  }
+]
