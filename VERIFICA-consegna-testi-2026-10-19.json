@@ -1,0 +1,46 @@
+[
+  {
+    "cards": [
+      {
+        "buttons": 1,
+        "helper": true,
+        "id": "44444444-4444-4444-8444-000000000003",
+        "reported": false,
+        "text": "Consegna effettuata"
+      },
+      {
+        "buttons": 1,
+        "helper": true,
+        "id": "44444444-4444-4444-8444-000000000007",
+        "reported": true,
+        "text": "Consegna effettuata"
+      },
+      {
+        "buttons": 0,
+        "helper": false,
+        "reported": false
+      }
+    ],
+    "overflow": false,
+    "view": "desktop-consegne",
+    "width": 1425
+  },
+  {
+    "customerButtons": [
+      "Ho ritirato",
+      "Ho ritirato"
+    ],
+    "ownerButtons": 0,
+    "view": "ritiri-cliente"
+  },
+  {
+    "helpers": true,
+    "labels": [
+      "Consegna effettuata",
+      "Consegna effettuata"
+    ],
+    "overflow": false,
+    "view": "mobile-consegne",
+    "width": 375
+  }
+]
