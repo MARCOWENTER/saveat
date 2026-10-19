@@ -1,0 +1,84 @@
+{
+  "date": "2026-10-19",
+  "scope": "Layout desktop e adattamento responsive; nessuna modifica SQL",
+  "responsive": [
+    {
+      "viewport": 1440,
+      "clientWidth": 1425,
+      "columns": 3,
+      "role": "visitatore",
+      "checks": 9,
+      "result": "PASS"
+    },
+    {
+      "viewport": 1024,
+      "clientWidth": 1009,
+      "columns": 3,
+      "role": "esercente",
+      "checks": 9,
+      "result": "PASS"
+    },
+    {
+      "viewport": 820,
+      "clientWidth": 805,
+      "columns": 2,
+      "role": "visitatore",
+      "checks": 9,
+      "result": "PASS"
+    },
+    {
+      "viewport": 390,
+      "clientWidth": 375,
+      "columns": 1,
+      "role": "visitatore",
+      "checks": 9,
+      "result": "PASS"
+    },
+    {
+      "viewport": 360,
+      "clientWidth": 345,
+      "columns": 1,
+      "role": "visitatore",
+      "checks": 9,
+      "result": "PASS"
+    }
+  ],
+  "simulated": {
+    "mode": "Browser locale con codice applicazione reale e backend dimostrativo",
+    "passed": [
+      "Menu singolo nel header; superiore su desktop e inferiore su telefono",
+      "Nessuno scorrimento orizzontale nelle cinque dimensioni",
+      "Identificatori DOM unici e collegamento unico per annuncio",
+      "Logo originale presente; due alimenti visibili nel riquadro misto",
+      "Impatto dopo gli annunci",
+      "Area esercente senza ricerca",
+      "Ricerca dalla home: Pane, Vicenza, 50 km trasferiti correttamente a RPC",
+      "Scheda due colonne desktop e una colonna mobile",
+      "Due alimenti, quantità 2 e 3, totale 3,60 €, una sola chiamata di conferma e ricevuta coerente",
+      "Quantità decimale 1,5 kg, prezzo 3,80 €/kg, totale 5,70 €",
+      "Pubblicazione esercente: quantità iniziale vuota"
+    ]
+  },
+  "realReadOnly": {
+    "passed": [
+      "Collegamento Supabase per impatto, comuni e ricerca",
+      "Impatto restituito 4 kg e 3 ritiri completati",
+      "Suggerimenti reali Verona e ricerca 20 km dalla home",
+      "Stato vuoto coerente: nessun alimento disponibile nella zona al momento del controllo"
+    ],
+    "notPerformed": [
+      "Nessuna prenotazione commerciale reale",
+      "Nessuna pubblicazione di alimenti reali",
+      "Nessuna modifica a profili o credenziali reali",
+      "Nessuna richiesta di posizione reale o caricamento foto"
+    ]
+  },
+  "invariants": {
+    "checkedFiles": 26,
+    "allUnchanged": true,
+    "includes": "Logo ufficiale, config, avatars.js, libreria Supabase e tutti gli SQL del pacchetto precedente"
+  },
+  "deployment": {
+    "status": "Da verificare dopo il commit"
+  }
+}
