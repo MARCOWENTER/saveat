@@ -1,0 +1,38 @@
+[
+  {
+    "name": "oggi",
+    "actual": "Oggi, 15:00–19:00",
+    "expected": "Oggi, 15:00–19:00",
+    "pass": true
+  },
+  {
+    "name": "domani",
+    "actual": "Domani, 17:00–19:00",
+    "expected": "Domani, 17:00–19:00",
+    "pass": true
+  },
+  {
+    "name": "oltre-mezzanotte",
+    "actual": "Oggi, 23:00 – Domani, 02:00",
+    "expected": "Oggi, 23:00 – Domani, 02:00",
+    "pass": true
+  },
+  {
+    "name": "cambio-ora",
+    "actual": "Domani, 00:30–03:30",
+    "expected": "Domani, 00:30–03:30",
+    "pass": true
+  },
+  {
+    "name": "fuso-italiano",
+    "actual": "Oggi, 00:30–01:30",
+    "expected": "Oggi, 00:30–01:30",
+    "pass": true
+  },
+  {
+    "name": "data-storica",
+    "actual": "30 dic 2025, 10:00–12:00",
+    "expected": "30 dic 2025, 10:00–12:00",
+    "pass": true
+  }
+]

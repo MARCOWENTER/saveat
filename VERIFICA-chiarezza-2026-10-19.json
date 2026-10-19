@@ -1,0 +1,449 @@
+[
+  {
+    "hiddenDeleteCommands": true,
+    "oldLabel": false,
+    "overflow": false,
+    "primary": [
+      "Consegna effettuata"
+    ],
+    "status": "Prenotazione confermata",
+    "view": "consegne-desktop",
+    "visibleOwnerCommands": 2,
+    "visibleTime": "Consegna al punto di ritiroOggi, 17:00–21:00",
+    "width": 1425
+  },
+  {
+    "screen": "miei",
+    "width": 1425,
+    "overflow": false,
+    "uniqueIds": true,
+    "screenWidth": 1296,
+    "mainWidth": 1360,
+    "formsNotNested": true,
+    "unassociatedControls": [],
+    "panels": [
+      {
+        "class": "card padded summary-booked",
+        "width": 1296,
+        "columns": "476.475px 433.163px 281.55px"
+      },
+      {
+        "class": "card padded summary-booked",
+        "width": 1296,
+        "columns": "476.475px 433.163px 281.55px"
+      },
+      {
+        "class": "card padded summary-booked",
+        "width": 0,
+        "columns": "476.475px 433.163px 281.55px"
+      },
+      {
+        "class": "card padded summary-booked",
+        "width": 0,
+        "columns": "476.475px 433.163px 281.55px"
+      },
+      {
+        "class": "card padded summary-booked",
+        "width": 0,
+        "columns": "476.475px 433.163px 281.55px"
+      }
+    ],
+    "quantities": []
+  },
+  {
+    "screen": "miei",
+    "width": 375,
+    "overflow": false,
+    "uniqueIds": true,
+    "screenWidth": 339.20001220703125,
+    "mainWidth": 375,
+    "formsNotNested": true,
+    "unassociatedControls": [],
+    "panels": [
+      {
+        "class": "card padded summary-booked",
+        "width": 339.20001220703125,
+        "columns": "none"
+      },
+      {
+        "class": "card padded summary-booked",
+        "width": 339.20001220703125,
+        "columns": "none"
+      },
+      {
+        "class": "card padded summary-booked",
+        "width": 0,
+        "columns": "none"
+      },
+      {
+        "class": "card padded summary-booked",
+        "width": 0,
+        "columns": "none"
+      },
+      {
+        "class": "card padded summary-booked",
+        "width": 0,
+        "columns": "none"
+      }
+    ],
+    "quantities": []
+  },
+  {
+    "screen": "miei",
+    "width": 375,
+    "overflow": false,
+    "uniqueIds": true,
+    "screenWidth": 339.20001220703125,
+    "mainWidth": 375,
+    "formsNotNested": true,
+    "unassociatedControls": [],
+    "panels": [
+      {
+        "class": "card padded summary-booked",
+        "width": 339.20001220703125,
+        "columns": "none"
+      },
+      {
+        "class": "card padded summary-booked",
+        "width": 339.20001220703125,
+        "columns": "none"
+      },
+      {
+        "class": "card padded summary-booked",
+        "width": 339.20001220703125,
+        "columns": "none"
+      },
+      {
+        "class": "card padded summary-booked",
+        "width": 339.20001220703125,
+        "columns": "none"
+      },
+      {
+        "class": "card padded summary-booked",
+        "width": 339.20001220703125,
+        "columns": "none"
+      }
+    ],
+    "quantities": []
+  },
+  {
+    "screen": "scheda",
+    "width": 375,
+    "overflow": false,
+    "uniqueIds": true,
+    "screenWidth": 339.20001220703125,
+    "mainWidth": 375,
+    "formsNotNested": true,
+    "unassociatedControls": [],
+    "panels": [
+      {
+        "class": "detail-layout",
+        "width": 339.20001220703125,
+        "columns": "339.2px"
+      }
+    ],
+    "quantities": []
+  },
+  {
+    "screen": "home",
+    "width": 345,
+    "overflow": false,
+    "uniqueIds": true,
+    "screenWidth": 308.8000183105469,
+    "mainWidth": 345,
+    "formsNotNested": true,
+    "unassociatedControls": [],
+    "panels": [],
+    "quantities": []
+  },
+  {
+    "screen": "miei",
+    "width": 345,
+    "overflow": false,
+    "uniqueIds": true,
+    "screenWidth": 308.8000183105469,
+    "mainWidth": 345,
+    "formsNotNested": true,
+    "unassociatedControls": [],
+    "panels": [
+      {
+        "class": "card padded summary-listing state-available",
+        "width": 308.8000183105469,
+        "columns": "none"
+      },
+      {
+        "class": "card padded summary-listing state-available",
+        "width": 308.8000183105469,
+        "columns": "none"
+      },
+      {
+        "class": "card padded summary-listing state-cancelled",
+        "width": 0,
+        "columns": "none"
+      }
+    ],
+    "quantities": []
+  },
+  {
+    "screen": "pubblica",
+    "width": 345,
+    "overflow": false,
+    "uniqueIds": true,
+    "screenWidth": 308.8000183105469,
+    "mainWidth": 345,
+    "formsNotNested": true,
+    "unassociatedControls": [],
+    "panels": [
+      {
+        "class": "publish-layout",
+        "width": 308.8000183105469,
+        "columns": "308.8px"
+      }
+    ],
+    "quantities": [
+      ""
+    ]
+  },
+  {
+    "screen": "scheda",
+    "width": 345,
+    "overflow": false,
+    "uniqueIds": true,
+    "screenWidth": 308.8000183105469,
+    "mainWidth": 345,
+    "formsNotNested": true,
+    "unassociatedControls": [],
+    "panels": [
+      {
+        "class": "detail-layout",
+        "width": 308.8000183105469,
+        "columns": "308.8px"
+      }
+    ],
+    "quantities": [
+      ""
+    ]
+  },
+  {
+    "screen": "account",
+    "width": 345,
+    "overflow": false,
+    "uniqueIds": true,
+    "screenWidth": 308.8000183105469,
+    "mainWidth": 345,
+    "formsNotNested": true,
+    "unassociatedControls": [],
+    "panels": [
+      {
+        "class": "profile-layout",
+        "width": 263.20001220703125,
+        "columns": "263.2px"
+      }
+    ],
+    "quantities": [
+      ""
+    ]
+  },
+  {
+    "screen": "avvisi",
+    "width": 345,
+    "overflow": false,
+    "uniqueIds": true,
+    "screenWidth": 308.8000183105469,
+    "mainWidth": 345,
+    "formsNotNested": true,
+    "unassociatedControls": [],
+    "panels": [],
+    "quantities": [
+      ""
+    ]
+  },
+  {
+    "screen": "miei",
+    "width": 805,
+    "overflow": false,
+    "uniqueIds": true,
+    "screenWidth": 740.7999877929688,
+    "mainWidth": 805,
+    "formsNotNested": true,
+    "unassociatedControls": [],
+    "panels": [
+      {
+        "class": "card padded summary-listing state-available",
+        "width": 740.7999877929688,
+        "columns": "445.325px 222.675px"
+      },
+      {
+        "class": "card padded summary-listing state-available",
+        "width": 740.7999877929688,
+        "columns": "445.325px 222.675px"
+      },
+      {
+        "class": "card padded summary-listing state-cancelled",
+        "width": 0,
+        "columns": "445.325px 222.675px"
+      }
+    ],
+    "quantities": []
+  },
+  {
+    "screen": "miei",
+    "width": 805,
+    "overflow": false,
+    "uniqueIds": true,
+    "screenWidth": 740.7999877929688,
+    "mainWidth": 805,
+    "formsNotNested": true,
+    "unassociatedControls": [],
+    "panels": [
+      {
+        "class": "card padded summary-booked",
+        "width": 740.7999877929688,
+        "columns": "335px 335px"
+      },
+      {
+        "class": "card padded summary-booked",
+        "width": 740.7999877929688,
+        "columns": "335px 335px"
+      },
+      {
+        "class": "card padded summary-booked",
+        "width": 0,
+        "columns": "335px 335px"
+      },
+      {
+        "class": "card padded summary-booked",
+        "width": 0,
+        "columns": "335px 335px"
+      },
+      {
+        "class": "card padded summary-booked",
+        "width": 0,
+        "columns": "335px 335px"
+      }
+    ],
+    "quantities": []
+  },
+  {
+    "screen": "miei",
+    "width": 805,
+    "overflow": false,
+    "uniqueIds": true,
+    "screenWidth": 740.7999877929688,
+    "mainWidth": 805,
+    "formsNotNested": true,
+    "unassociatedControls": [],
+    "panels": [
+      {
+        "class": "card padded summary-received",
+        "width": 740.7999877929688,
+        "columns": "335px 335px"
+      },
+      {
+        "class": "card padded summary-received",
+        "width": 740.7999877929688,
+        "columns": "335px 335px"
+      },
+      {
+        "class": "card padded summary-received",
+        "width": 740.7999877929688,
+        "columns": "335px 335px"
+      }
+    ],
+    "quantities": []
+  },
+  {
+    "screen": "miei",
+    "width": 1009,
+    "overflow": false,
+    "uniqueIds": true,
+    "screenWidth": 944.7999877929688,
+    "mainWidth": 1009,
+    "formsNotNested": true,
+    "unassociatedControls": [],
+    "panels": [
+      {
+        "class": "card padded summary-listing state-available",
+        "width": 944.7999877929688,
+        "columns": "619.825px 244.163px"
+      },
+      {
+        "class": "card padded summary-listing state-available",
+        "width": 944.7999877929688,
+        "columns": "619.825px 244.163px"
+      },
+      {
+        "class": "card padded summary-listing state-cancelled",
+        "width": 0,
+        "columns": "619.825px 244.163px"
+      }
+    ],
+    "quantities": []
+  },
+  {
+    "screen": "miei",
+    "width": 1009,
+    "overflow": false,
+    "uniqueIds": true,
+    "screenWidth": 944.7999877929688,
+    "mainWidth": 1009,
+    "formsNotNested": true,
+    "unassociatedControls": [],
+    "panels": [
+      {
+        "class": "card padded summary-booked",
+        "width": 944.7999877929688,
+        "columns": "434px 434px"
+      },
+      {
+        "class": "card padded summary-booked",
+        "width": 944.7999877929688,
+        "columns": "434px 434px"
+      },
+      {
+        "class": "card padded summary-booked",
+        "width": 0,
+        "columns": "434px 434px"
+      },
+      {
+        "class": "card padded summary-booked",
+        "width": 0,
+        "columns": "434px 434px"
+      },
+      {
+        "class": "card padded summary-booked",
+        "width": 0,
+        "columns": "434px 434px"
+      }
+    ],
+    "quantities": []
+  },
+  {
+    "screen": "miei",
+    "width": 1009,
+    "overflow": false,
+    "uniqueIds": true,
+    "screenWidth": 944.7999877929688,
+    "mainWidth": 1009,
+    "formsNotNested": true,
+    "unassociatedControls": [],
+    "panels": [
+      {
+        "class": "card padded summary-received",
+        "width": 944.7999877929688,
+        "columns": "434px 434px"
+      },
+      {
+        "class": "card padded summary-received",
+        "width": 944.7999877929688,
+        "columns": "434px 434px"
+      },
+      {
+        "class": "card padded summary-received",
+        "width": 944.7999877929688,
+        "columns": "434px 434px"
+      }
+    ],
+    "quantities": []
+  }
+]
