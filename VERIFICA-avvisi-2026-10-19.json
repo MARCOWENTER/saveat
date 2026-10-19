@@ -1,0 +1,30 @@
+[
+  {
+    "button": "🔔 Avvisi (1)",
+    "groups": [
+      "Da leggere 1",
+      "Già letti 1"
+    ],
+    "overflow": false,
+    "phase": "prima",
+    "read": 1,
+    "unread": 1
+  },
+  {
+    "alertHidden": true,
+    "button": "🔔 Avvisi",
+    "markButtons": 0,
+    "phase": "dopo",
+    "read": 2,
+    "summary": "Tutti gli avvisi sono stati letti.",
+    "unread": 0
+  },
+  {
+    "columns": "339.2px",
+    "overflow": false,
+    "phase": "mobile",
+    "read": 1,
+    "unread": 1,
+    "width": 375
+  }
+]
