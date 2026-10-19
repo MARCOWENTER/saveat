@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-19",
+  "layout": {
+    "desktop1440": "PASS 9 controlli, 3 colonne",
+    "mobile390": "PASS 9 controlli, nessuno scorrimento orizzontale",
+    "businessMobile": "PASS 9 controlli, ricerca nascosta"
+  },
+  "simulated": {
+    "mixedFoods": "2 campi quantità, 2 pezzi gratis + 3 croissant = 3,60 euro",
+    "bookingSubmitted": false
+  },
+  "real": {
+    "supabaseRead": "impatto circa 4 kg, lettura home riuscita",
+    "writes": false
+  },
+  "invariants": {
+    "files": 26,
+    "identical": true
+  },
+  "image": {
+    "tool": "image_gen integrato",
+    "file": "alimenti-copertina.webp",
+    "size": 177664,
+    "atmospheric": true
+  },
+  "deployment": "in attesa"
+}
