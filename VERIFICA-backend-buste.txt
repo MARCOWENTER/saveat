@@ -1,0 +1,9 @@
+PASS: busta + singolo articolo, contenuto, memoria privata senza quantita, stock separati, totale, modifica contenuto e avviso, prezzi concordati, variazione quantita, stock insufficiente e autorizzazioni
+Controllo dopo migrazione: utenti_test_residui
+annunci_test_residui
+rls_attiva
+contenuto_modificabile
+0
+0
+true
+true

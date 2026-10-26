@@ -1,0 +1,114 @@
+[
+  {
+    "file": "aggiornamento-avvisi-dettagliati.sql",
+    "unchanged": true
+  },
+  {
+    "file": "aggiornamento-avvisi.sql",
+    "unchanged": true
+  },
+  {
+    "file": "aggiornamento-contatore.sql",
+    "unchanged": true
+  },
+  {
+    "file": "aggiornamento-contatti-messaggi-resoconti.sql",
+    "unchanged": true
+  },
+  {
+    "file": "aggiornamento-contenitore.sql",
+    "unchanged": true
+  },
+  {
+    "file": "aggiornamento-correzioni-pagamenti.sql",
+    "unchanged": true
+  },
+  {
+    "file": "aggiornamento-elenco-foto-privato.sql",
+    "unchanged": true
+  },
+  {
+    "file": "aggiornamento-esercenti.sql",
+    "unchanged": true
+  },
+  {
+    "file": "aggiornamento-filtri-ricerca.sql",
+    "unchanged": true
+  },
+  {
+    "file": "aggiornamento-foto-donazioni.sql",
+    "unchanged": true
+  },
+  {
+    "file": "aggiornamento-foto-profilo.sql",
+    "unchanged": true
+  },
+  {
+    "file": "aggiornamento-geolocalizzazione.sql",
+    "unchanged": true
+  },
+  {
+    "file": "aggiornamento-gestione-annunci.sql",
+    "unchanged": true
+  },
+  {
+    "file": "aggiornamento-memoria-alimenti.sql",
+    "unchanged": true
+  },
+  {
+    "file": "aggiornamento-prenotazioni-quantita.sql",
+    "unchanged": true
+  },
+  {
+    "file": "aggiornamento-ritiri-attivita.sql",
+    "unchanged": true
+  },
+  {
+    "file": "aggiornamento-ritiro.sql",
+    "unchanged": true
+  },
+  {
+    "file": "aggiornamento-utenti-annullamento.sql",
+    "unchanged": true
+  },
+  {
+    "file": "aggiornamento-vendita.sql",
+    "unchanged": true
+  },
+  {
+    "file": "config.js",
+    "unchanged": true
+  },
+  {
+    "file": "favicon.svg",
+    "unchanged": true
+  },
+  {
+    "file": "logo-definitivo.svg",
+    "unchanged": true
+  },
+  {
+    "file": "supabase.js",
+    "unchanged": true
+  },
+  {
+    "file": "supabase.sql",
+    "unchanged": true
+  },
+  {
+    "file": "VERIFICA-esercenti-transazione.sql",
+    "unchanged": true
+  },
+  {
+    "file": "VERIFICA-filtri-transazione.sql",
+    "unchanged": true
+  },
+  {
+    "file": "VERIFICA-operazioni-transazione.sql",
+    "unchanged": true
+  },
+  {
+    "file": "VERIFICA-ritiri-attivita-transazione.sql",
+    "unchanged": true
+  }
+]

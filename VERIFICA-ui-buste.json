@@ -1,0 +1,313 @@
+{
+  "simulated": true,
+  "publication": {
+    "p_listing": {
+      "title": "Busta mista",
+      "description": "",
+      "municipality_code": "023091",
+      "pickup_start": "2026-10-26T14:08:00.000Z",
+      "pickup_end": "2026-10-26T19:00:00.000Z",
+      "address": "Banco di prova",
+      "contact": "Ritiro tramite Saveat: segui le istruzioni e mostra la prenotazione al punto di ritiro.",
+      "instructions": "",
+      "payment_methods": [
+        "cash"
+      ]
+    },
+    "p_items": [
+      {
+        "name": "Busta mista",
+        "category": "Altri alimenti",
+        "description": "Pane, frutta e prodotti confezionati",
+        "quantity": 8,
+        "unit": "confezioni",
+        "price": 4,
+        "date_type": "none",
+        "label_date": null,
+        "allergens": "",
+        "photo_path": null,
+        "unit_weight_kg": null,
+        "container_provided": true
+      },
+      {
+        "name": "Yogurt",
+        "category": "",
+        "description": "",
+        "quantity": 10,
+        "unit": "pezzi",
+        "price": 0,
+        "date_type": "none",
+        "label_date": null,
+        "allergens": "",
+        "photo_path": null,
+        "unit_weight_kg": null,
+        "container_provided": false
+      }
+    ]
+  },
+  "memory": {
+    "description": "Pane, frutta e prodotti confezionati",
+    "price": "4",
+    "quantity": "",
+    "required": true,
+    "unit": "confezioni"
+  },
+  "reservation": {
+    "p_listing_id": "buste",
+    "p_items": [
+      {
+        "item_id": "aaaa0000-0000-4000-8000-000000000200",
+        "quantity": 2
+      },
+      {
+        "item_id": "aaaa0000-0000-4000-8000-000000000201",
+        "quantity": 3
+      }
+    ],
+    "p_request_id": "8685b747-a41e-46c4-bcc2-775de446c5cd"
+  },
+  "photo": "Preparazione locale riuscita, nessun caricamento remoto di foto di prova",
+  "audits": [
+    {
+      "screen": "pubblica",
+      "width": 1425,
+      "overflow": false,
+      "uniqueIds": true,
+      "screenWidth": 1296,
+      "mainWidth": 1360,
+      "formsNotNested": true,
+      "unassociatedControls": [],
+      "panels": [
+        {
+          "class": "publish-layout",
+          "width": 1296,
+          "columns": "739.662px 528.325px"
+        }
+      ],
+      "quantities": [
+        ""
+      ]
+    },
+    {
+      "screen": "pubblica",
+      "width": 1009,
+      "overflow": false,
+      "uniqueIds": true,
+      "screenWidth": 944.7999877929688,
+      "mainWidth": 1009,
+      "formsNotNested": true,
+      "unassociatedControls": [],
+      "panels": [
+        {
+          "class": "publish-layout",
+          "width": 944.7999877929688,
+          "columns": "534.787px 382px"
+        }
+      ],
+      "quantities": [
+        ""
+      ]
+    },
+    {
+      "screen": "pubblica",
+      "width": 805,
+      "overflow": false,
+      "uniqueIds": true,
+      "screenWidth": 740.7999877929688,
+      "mainWidth": 805,
+      "formsNotNested": true,
+      "unassociatedControls": [],
+      "panels": [
+        {
+          "class": "publish-layout",
+          "width": 740.7999877929688,
+          "columns": "740.8px"
+        }
+      ],
+      "quantities": [
+        ""
+      ]
+    },
+    {
+      "screen": "pubblica",
+      "width": 375,
+      "overflow": false,
+      "uniqueIds": true,
+      "screenWidth": 339.20001220703125,
+      "mainWidth": 375,
+      "formsNotNested": true,
+      "unassociatedControls": [],
+      "panels": [
+        {
+          "class": "publish-layout",
+          "width": 339.20001220703125,
+          "columns": "339.2px"
+        }
+      ],
+      "quantities": [
+        ""
+      ]
+    },
+    {
+      "screen": "pubblica",
+      "width": 345,
+      "overflow": false,
+      "uniqueIds": true,
+      "screenWidth": 308.8000183105469,
+      "mainWidth": 345,
+      "formsNotNested": true,
+      "unassociatedControls": [],
+      "panels": [
+        {
+          "class": "publish-layout",
+          "width": 308.8000183105469,
+          "columns": "308.8px"
+        }
+      ],
+      "quantities": [
+        ""
+      ]
+    },
+    {
+      "screen": "scheda",
+      "width": 1425,
+      "overflow": false,
+      "uniqueIds": true,
+      "screenWidth": 1296,
+      "mainWidth": 1360,
+      "formsNotNested": true,
+      "unassociatedControls": [],
+      "panels": [
+        {
+          "class": "detail-layout",
+          "width": 1296,
+          "columns": "779.537px 472.462px"
+        }
+      ],
+      "quantities": [
+        ""
+      ]
+    },
+    {
+      "screen": "scheda",
+      "width": 805,
+      "overflow": false,
+      "uniqueIds": true,
+      "screenWidth": 740.7999877929688,
+      "mainWidth": 805,
+      "formsNotNested": true,
+      "unassociatedControls": [],
+      "panels": [
+        {
+          "class": "detail-layout",
+          "width": 740.7999877929688,
+          "columns": "740.8px"
+        }
+      ],
+      "quantities": [
+        ""
+      ]
+    },
+    {
+      "screen": "scheda",
+      "width": 375,
+      "overflow": false,
+      "uniqueIds": true,
+      "screenWidth": 339.20001220703125,
+      "mainWidth": 375,
+      "formsNotNested": true,
+      "unassociatedControls": [],
+      "panels": [
+        {
+          "class": "detail-layout",
+          "width": 339.20001220703125,
+          "columns": "339.2px"
+        }
+      ],
+      "quantities": [
+        ""
+      ]
+    },
+    {
+      "screen": "scheda",
+      "width": 345,
+      "overflow": false,
+      "uniqueIds": true,
+      "screenWidth": 308.8000183105469,
+      "mainWidth": 345,
+      "formsNotNested": true,
+      "unassociatedControls": [],
+      "panels": [
+        {
+          "class": "detail-layout",
+          "width": 308.8000183105469,
+          "columns": "308.8px"
+        }
+      ],
+      "quantities": [
+        ""
+      ]
+    },
+    {
+      "screen": "modifica",
+      "width": 1425,
+      "overflow": false,
+      "uniqueIds": true,
+      "screenWidth": 1296,
+      "mainWidth": 1360,
+      "formsNotNested": true,
+      "unassociatedControls": [],
+      "panels": [
+        {
+          "class": "edit-layout",
+          "width": 1296,
+          "columns": "716.688px 551.3px"
+        }
+      ],
+      "quantities": [
+        ""
+      ]
+    },
+    {
+      "screen": "modifica",
+      "width": 375,
+      "overflow": false,
+      "uniqueIds": true,
+      "screenWidth": 339.20001220703125,
+      "mainWidth": 375,
+      "formsNotNested": true,
+      "unassociatedControls": [],
+      "panels": [
+        {
+          "class": "edit-layout",
+          "width": 339.20001220703125,
+          "columns": "339.2px"
+        }
+      ],
+      "quantities": [
+        ""
+      ]
+    },
+    {
+      "screen": "modifica",
+      "width": 345,
+      "overflow": false,
+      "uniqueIds": true,
+      "screenWidth": 308.8000183105469,
+      "mainWidth": 345,
+      "formsNotNested": true,
+      "unassociatedControls": [],
+      "panels": [
+        {
+          "class": "edit-layout",
+          "width": 308.8000183105469,
+          "columns": "308.8px"
+        }
+      ],
+      "quantities": [
+        ""
+      ]
+    }
+  ],
+  "errors": []
+}
