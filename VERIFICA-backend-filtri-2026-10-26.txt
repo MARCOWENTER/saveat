@@ -1,0 +1,5 @@
+Verifiche reali in Supabase qifgkxgahfmioeslphjx, 26 ottobre 2026.
+Nuova funzione ricerca security invoker, search_path vuoto. RLS annunci e alimenti attiva.
+Test transazionali: PASS categoria+offerta sullo stesso alimento disponibile, paginazione 20+2 senza duplicati, annunci senza categoria inclusi con Tutte, ruolo anonimo/privato/esercente e assenza dati punto ritiro.
+ROLLBACK eseguito. Controllo successivo: utenti test residui 0, annunci test residui 0, security_definer false, rls_annunci true, rls_alimenti true.
+Nessuna prenotazione, consegna o profilo reale modificato.

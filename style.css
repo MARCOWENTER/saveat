@@ -102,3 +102,11 @@ body{background:#fff;-webkit-font-smoothing:antialiased}h1,h2,h3{color:var(--cha
 @media(max-width:699px){nav a{font-size:13px;padding-inline:5px}.pickup-time>strong{font-size:19px}.reservation-actions .row{gap:10px}.reservation-actions>.btn{display:block;width:100%}.reservation-logistics>.pickup-time{margin-top:0}.reservation-actions .small{margin-top:0}}
 
 .listing-pickup{font-weight:600;color:#465d4b}
+
+/* Filtri essenziali: categoria e offerta, applicati prima della paginazione. */
+.search-toolbar>.search-filters{grid-column:1/-1;display:grid;gap:16px;min-width:0;border-top:1px solid var(--line);padding-top:18px}.search-filters .search-field{min-width:0}.search-filters label{margin-top:0}.search-filters button{align-self:end;min-height:48px}.search-filter-summary{line-height:1.6}#search-filter-summary:empty{display:none}#publish-item-count{font-weight:650;color:#465d4b}
+@media(min-width:700px){.search-toolbar>.search-filters{grid-template-columns:minmax(0,1.4fr) minmax(0,1fr) auto;align-items:end}.search-filters #reset-filters{padding-inline:20px}}
+@media(min-width:1000px){.publish-confirmation>#publish-item-count{grid-column:2;grid-row:2;margin:0}.publish-confirmation>.full{grid-column:2;grid-row:3}.search-toolbar>.search-filters{padding-top:20px}}
+@media(max-width:699px){.search-filters #reset-filters{width:100%}.search-filters select{min-height:48px}}
+
+@media(max-width:699px){header .brand-image{width:150px}header .profile-menu-wrap:has(.identity-text){max-width:44px;flex:0 0 44px}header #account-button:has(.identity-text){width:44px;min-width:44px;height:44px;padding:7px}header .identity-text{display:none}#notifications-button{font-size:12px;padding:8px;min-height:44px}.search-toolbar{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:14px}.search-toolbar>.search-field{align-self:end}.search-toolbar>.search-field:first-child,.search-toolbar>.search-submit,.search-toolbar>#search-area-status,.search-toolbar>.row,.search-toolbar>.small{grid-column:1/-1}.search-toolbar>.search-filters{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.search-filters select{font-size:14px;padding-inline:9px}.search-filters #reset-filters{grid-column:1/-1}.search-toolbar>.row{gap:8px;justify-content:flex-start}.search-toolbar>.row button{font-size:13px;padding:10px 12px}}
