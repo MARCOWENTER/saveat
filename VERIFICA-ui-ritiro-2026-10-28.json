@@ -1,0 +1,253 @@
+{
+  "simulated": true,
+  "automaticPoint": {
+    "address": "Piazza Bra, ingresso principale",
+    "lat": "45.4385",
+    "lon": "10.993",
+    "quantity": ""
+  },
+  "guidedName": {
+    "focus": "item-1-name",
+    "message": "Completa o correggi: Nome dell’alimento."
+  },
+  "hiddenDate": {
+    "opened": true,
+    "focus": "item-1-label_date"
+  },
+  "manualMapClick": true,
+  "manualCoordinatesConfirmed": true,
+  "quantityDialog": {
+    "text": "Modifica quantità del ritiroLe quantità indicate sono il nuovo totale da ritirare. Il prezzo unitario concordato resta invariato, anche se l’annuncio è cambiato.Busta mista · busteQuantità prenotata: 2 · massimo prenotabile ora: 10 · 4,00 € / bustaYogurt · pezziQuantità prenotata: 3 · massimo prenotabile ora: 10 · Gratis / pezzoChi pubblica riceverà un avviso della modifica. Puoi mettere 0 per togliere un alimento. Per annullare tutto usa Altre azioni → Annulla prenotazione. La disponibilità verrà ricontrollata alla conferma.Nuovo totale: 8,00 €Salva nuove quantitàIndietro",
+    "values": [
+      {
+        "max": "10",
+        "step": "1",
+        "value": "2"
+      },
+      {
+        "max": "10",
+        "step": "1",
+        "value": "3"
+      }
+    ]
+  },
+  "layouts": [
+    {
+      "screen": "pubblica",
+      "width": 1425,
+      "overflow": false,
+      "uniqueIds": true,
+      "screenWidth": 1296,
+      "mainWidth": 1360,
+      "formsNotNested": true,
+      "unassociatedControls": [],
+      "panels": [
+        {
+          "class": "publish-layout",
+          "width": 1296,
+          "columns": "739.662px 528.325px"
+        }
+      ],
+      "quantities": [
+        ""
+      ]
+    },
+    {
+      "screen": "pubblica",
+      "width": 1009,
+      "overflow": false,
+      "uniqueIds": true,
+      "screenWidth": 944.7999877929688,
+      "mainWidth": 1009,
+      "formsNotNested": true,
+      "unassociatedControls": [],
+      "panels": [
+        {
+          "class": "publish-layout",
+          "width": 944.7999877929688,
+          "columns": "534.787px 382px"
+        }
+      ],
+      "quantities": [
+        ""
+      ]
+    },
+    {
+      "screen": "pubblica",
+      "width": 375,
+      "overflow": false,
+      "uniqueIds": true,
+      "screenWidth": 339.20001220703125,
+      "mainWidth": 375,
+      "formsNotNested": true,
+      "unassociatedControls": [],
+      "panels": [
+        {
+          "class": "publish-layout",
+          "width": 339.20001220703125,
+          "columns": "339.2px"
+        }
+      ],
+      "quantities": [
+        ""
+      ]
+    },
+    {
+      "screen": "pubblica",
+      "width": 345,
+      "overflow": false,
+      "uniqueIds": true,
+      "screenWidth": 308.8000183105469,
+      "mainWidth": 345,
+      "formsNotNested": true,
+      "unassociatedControls": [],
+      "panels": [
+        {
+          "class": "publish-layout",
+          "width": 308.8000183105469,
+          "columns": "308.8px"
+        }
+      ],
+      "quantities": [
+        ""
+      ]
+    },
+    {
+      "screen": "cerca",
+      "width": 1425,
+      "overflow": false,
+      "uniqueIds": true,
+      "screenWidth": 1296,
+      "mainWidth": 1360,
+      "formsNotNested": true,
+      "unassociatedControls": [],
+      "panels": [],
+      "quantities": [
+        ""
+      ]
+    },
+    {
+      "screen": "cerca",
+      "width": 1009,
+      "overflow": false,
+      "uniqueIds": true,
+      "screenWidth": 944.7999877929688,
+      "mainWidth": 1009,
+      "formsNotNested": true,
+      "unassociatedControls": [],
+      "panels": [],
+      "quantities": [
+        ""
+      ]
+    },
+    {
+      "screen": "cerca",
+      "width": 375,
+      "overflow": false,
+      "uniqueIds": true,
+      "screenWidth": 339.20001220703125,
+      "mainWidth": 375,
+      "formsNotNested": true,
+      "unassociatedControls": [],
+      "panels": [],
+      "quantities": [
+        ""
+      ]
+    },
+    {
+      "screen": "cerca",
+      "width": 345,
+      "overflow": false,
+      "uniqueIds": true,
+      "screenWidth": 308.8000183105469,
+      "mainWidth": 345,
+      "formsNotNested": true,
+      "unassociatedControls": [],
+      "panels": [],
+      "quantities": [
+        ""
+      ]
+    },
+    {
+      "screen": "modifica",
+      "width": 1425,
+      "overflow": false,
+      "uniqueIds": true,
+      "screenWidth": 1296,
+      "mainWidth": 1360,
+      "formsNotNested": true,
+      "unassociatedControls": [],
+      "panels": [
+        {
+          "class": "edit-layout",
+          "width": 1296,
+          "columns": "716.688px 551.3px"
+        }
+      ],
+      "quantities": [
+        ""
+      ]
+    },
+    {
+      "screen": "modifica",
+      "width": 1009,
+      "overflow": false,
+      "uniqueIds": true,
+      "screenWidth": 944.7999877929688,
+      "mainWidth": 1009,
+      "formsNotNested": true,
+      "unassociatedControls": [],
+      "panels": [
+        {
+          "class": "edit-layout",
+          "width": 944.7999877929688,
+          "columns": "518.188px 398.612px"
+        }
+      ],
+      "quantities": [
+        ""
+      ]
+    },
+    {
+      "screen": "modifica",
+      "width": 375,
+      "overflow": false,
+      "uniqueIds": true,
+      "screenWidth": 339.20001220703125,
+      "mainWidth": 375,
+      "formsNotNested": true,
+      "unassociatedControls": [],
+      "panels": [
+        {
+          "class": "edit-layout",
+          "width": 339.20001220703125,
+          "columns": "339.2px"
+        }
+      ],
+      "quantities": [
+        ""
+      ]
+    },
+    {
+      "screen": "modifica",
+      "width": 345,
+      "overflow": false,
+      "uniqueIds": true,
+      "screenWidth": 308.8000183105469,
+      "mainWidth": 345,
+      "formsNotNested": true,
+      "unassociatedControls": [],
+      "panels": [
+        {
+          "class": "edit-layout",
+          "width": 308.8000183105469,
+          "columns": "308.8px"
+        }
+      ],
+      "quantities": [
+        ""
+      ]
+    }
+  ],
+  "errors": []
+}

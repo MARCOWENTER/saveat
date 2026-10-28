@@ -1,0 +1,11 @@
+PASS: indirizzo pubblico, sede/contatto/istruzioni riservati, distanza reale e fallback storico, memoria privata multipunto, modifica e avviso, prezzi/stock protetti, confezioni intere e kg decimali
+Pulizia e RLS: utenti_test_residui
+annunci_test_residui
+rls_attiva
+confezioni
+kg
+0
+0
+true
+2
+1,5

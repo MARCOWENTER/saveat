@@ -1,0 +1,19 @@
+# Saveat — punto di ritiro e convalida, 28 ottobre 2026
+
+Base GitHub: a70b77c67f83f7bc20d9918fc7e99af9e1067712, categoria visibile.
+
+Decisioni: sede legale del profilo riservata. Indirizzo esatto di ritiro pubblico e separato, scelto in pubblicazione; mostrato con prodotti e contenuto indicativo delle buste nelle anteprime. Coordinate del punto scelte sulla mappa o, su azione esplicita, dal dispositivo mentre ci si trova lì. Nessun indirizzo inviato a geocodificatori. Distanze in linea d’aria calcolate dalle coordinate di ritiro; gli annunci precedenti senza punto confermato mantengono indirizzo privato e distanza dal comune, con indicazione esplicita.
+
+Memoria privata per account dei punti usati, distinta dagli alimenti: proposta automatica dell’ultimo punto, scelta di altri punti e modifica libera di indirizzo/posizione. Indirizzo cambiato richiede nuova posizione per evitare coordinate rimaste dal punto precedente. Nessun orario o quantità riutilizzato automaticamente. I precedenti indirizzi sono richiamabili ma non resi pubblici senza conferma della posizione tramite il nuovo modulo.
+
+Errori: conferma con dati mancanti porta al primo campo non valido, apre eventuali dettagli chiusi e lo evidenzia. Copre pubblicazione/modifica, campi nativi e controlli aggiuntivi su comune, pagamento, quantità e punto mancante.
+
+Quantità: visualizzazione senza zeri decimali superflui per confezioni, pezzi e buste. Campi della variazione normalizzati da stringhe2.000/3.000 a2/3, incremento1. Kg e litri conservano i decimali effettivi. Nuovi avvisi formattati come2 →3 confezioni e1,5 →2,5kg. Vecchi avvisi sulle confezioni normalizzati solo in visualizzazione; nessuna riscrittura di storico o prezzi.
+
+Migrazione incrementale aggiornamento-punti-ritiro.sql già applicata con successo: tre colonne pubbliche solo per il ritiro confermato, tabella memoria privata con RLS, RPC di suggerimenti del solo titolare, helper interno non eseguibile dai client. Patch mirate delle funzioni esistenti di creazione/modifica/avvisi e delle due ricerche; verifiche e lock delle prenotazioni preservati. Nessuna sede, contatto o istruzione privata nelle ricerche. Nessuna esecuzione indiscriminata SQL completo.
+
+Prove REALI su Supabase con dati fittizi in transazione e ROLLBACK: distanza da un punto posto circa55km dal centro comunale, corretta inclusione/esclusione a1km; fallback storico senza indirizzo privato; sede/contatto/istruzioni esclusi; memoria isolata per account e più punti modificabili; punto senza coordinate e confezione frazionata respinti; prenotazione e variazione quantità, prezzi concordati e avvisi preservati; accesso estraneo/anonimo negato. Esito PASS. Dopo migrazione: utenti test residui0, annunci test residui0, RLS annunci/alimenti/memorie attiva; formato2 e1,5 verificato.
+
+Prove UI SIMULATE: ritorno al nome mancante; apertura dettagli e focus su data mancante; punto proposto automaticamente e cambio Verona/Vicenza con coordinate; salvataggio unico con indirizzo pubblico; cambio indirizzo richiede nuova posizione; mappa realmente caricata (6 immagini256px), click e coordinate manuali confermati; dialogo quantità con stringhe2.000/3.000 mostra2/3. Dodici controlli di layout su pubblicazione/ricerca/modifica, viewport1440/1024/390/360, senza overflow, ID duplicati o moduli annidati. Nessun errore del browser nella versione finale. GPS reale e prenotazione con utenti reali non eseguiti.
+
+Leaflet1.9.4 locale, hash SHA256 confrontati con quelli ufficiali: JS20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo= e CSSp4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=. Fonti: https://leafletjs.com/download.html e https://operations.osmfoundation.org/policies/tiles/. Attribuzione visibile, cache normale del browser, nessun prefetch. CSP estesa soltanto alle immagini https://tile.openstreetmap.org; script locali, nessuna chiave segreta.
