@@ -118,3 +118,6 @@ body{background:#fff;-webkit-font-smoothing:antialiased}h1,h2,h3{color:var(--cha
 
 /* Ritiro pubblico, memoria dei punti e convalida guidata. */
 .pickup-point-map{height:290px;width:100%;margin:14px 0;z-index:0}.pickup-map-pin{color:#ed7900;font-size:32px;line-height:28px;text-shadow:0 0 4px #fff,0 0 2px #111}.coordinate-fields{margin-top:12px}.pickup-map-details{margin-top:12px}.pickup-place-tools{margin-top:18px}.listing-food-summary,.listing-pickup-address{overflow-wrap:anywhere;line-height:1.5;margin:10px 0}.listing-pickup-address{padding:9px 0;border-top:1px solid #e4e6e2}.field-incomplete{outline:3px solid #b63c2a!important;outline-offset:3px}input,select,textarea,button{scroll-margin-top:125px}.form-validation-message{margin-bottom:16px}.leaflet-control a{min-height:0}
+
+/* Correzioni prelancio: avviso compatto e anteprime senza ripetizioni. */
+.notification-nudge{margin:0 0 1rem;padding:.6rem .8rem;border-left:3px solid var(--orange,#f58900);background:#fff7ec;border-radius:.35rem;font-size:.9rem}.notification-nudge a{color:inherit;font-weight:600;text-decoration:none}.notification-nudge a:hover{text-decoration:underline}.listing-bag-content{display:block;font-weight:400;color:var(--muted,#5c655f);line-height:1.45;margin-top:.25rem}.skip:focus{z-index:10000}#main:focus{outline:none}
